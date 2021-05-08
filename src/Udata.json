@@ -1,0 +1,44 @@
+[
+  {
+    "serial": "J31sdf7",
+    "company": "Polytrade",
+    "drive": "direct drive",
+    "type": "screen",
+    "image": "/J317-1.jpg"
+  },
+  {
+    "serial": "J319-1",
+    "company": "Roundhill",
+    "drive": "direct drive",
+    "type": "screen",
+    "image": "/J319-2-4.jpg"
+  },
+  {
+    "serial": "J319-2",
+    "company": "Roundhill",
+    "drive": "direct drive",
+    "type": "cooler",
+    "image": "/J319-2-1.jpg"
+  },
+  {
+    "serial": "J317",
+    "company": "Polytrade",
+    "drive": "direct drive",
+    "type": "screen",
+    "image": "/J317-1.jpg"
+  },
+  {
+    "serial": "J319-1",
+    "company": "Roundhill",
+    "drive": "direct drive",
+    "type": "screen",
+    "image": "/J319-2-4.jpg"
+  },
+  {
+    "serial": "J319-2",
+    "company": "Roundhill",
+    "drive": "direct drive",
+    "type": "cooler",
+    "image": "/J319-2-1.jpg"
+  }
+]

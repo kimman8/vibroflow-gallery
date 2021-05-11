@@ -5,6 +5,8 @@ export const unitData = [
     drive: "direct drive",
     type: "screen",
     image: require("../src/unit-imgs/J317.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
   {
     serial: "J319-1",
@@ -12,6 +14,8 @@ export const unitData = [
     drive: "direct drive",
     type: "screen",
     image: require("../src/unit-imgs/J319.jpg").default,
+    supportFrame: true,
+    covers: true,
   },
   {
     serial: "J319-2",
@@ -19,6 +23,8 @@ export const unitData = [
     drive: "direct drive",
     type: "cooler",
     image: require("../src/unit-imgs/J319-2.jpg").default,
+    supportFrame: true,
+    covers: true,
   },
   {
     serial: "J320",
@@ -26,6 +32,8 @@ export const unitData = [
     drive: "sub resonant",
     type: "screen",
     image: require("../src/unit-imgs/J320.jpg").default,
+    supportFrame: true,
+    covers: true,
   },
   {
     serial: "J321",
@@ -33,6 +41,8 @@ export const unitData = [
     drive: "direct drive",
     type: "conveyor",
     image: require("../src/unit-imgs/J321.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
   {
     serial: "J322-1",
@@ -40,20 +50,26 @@ export const unitData = [
     drive: "direct drive",
     type: "blower",
     image: require("../src/unit-imgs/J322-1.jpg").default,
+    supportFrame: false,
+    covers: true,
   },
   {
     serial: "J322-2",
     company: "RDT",
     drive: "sub resonant",
-    type: "screen",
+    type: "flip flow",
     image: require("../src/unit-imgs/J322-2.jpg").default,
+    supportFrame: false,
+    covers: true,
   },
   {
     serial: "J322-3",
     company: "RDT",
     drive: "sub resonant",
-    type: "screen",
+    type: "flip flow",
     image: require("../src/unit-imgs/J322-3.jpg").default,
+    supportFrame: false,
+    covers: true,
   },
   {
     serial: "J323-1",
@@ -61,6 +77,8 @@ export const unitData = [
     drive: "sub resonant",
     type: "feeder",
     image: require("../src/unit-imgs/J323-1.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
   {
     serial: "J323-2",
@@ -68,6 +86,8 @@ export const unitData = [
     drive: "sub resonant",
     type: "screen",
     image: require("../src/unit-imgs/J323-2.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
   {
     serial: "J324",
@@ -75,6 +95,8 @@ export const unitData = [
     drive: "direct drive",
     type: "screen",
     image: require("../src/unit-imgs/J324.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
   {
     serial: "J325",
@@ -82,6 +104,8 @@ export const unitData = [
     drive: "direct drive",
     type: "screen",
     image: require("../src/unit-imgs/J325.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
   {
     serial: "J326",
@@ -89,6 +113,8 @@ export const unitData = [
     drive: "direct drive",
     type: "screen",
     image: require("../src/unit-imgs/J326.jpg").default,
+    supportFrame: false,
+    covers: false,
   },
   {
     serial: "J327",
@@ -96,6 +122,8 @@ export const unitData = [
     drive: "direct drive",
     type: "conveyor",
     image: require("../src/unit-imgs/J327.jpg").default,
+    supportFrame: false,
+    covers: false,
   },
   {
     serial: "J328",
@@ -103,6 +131,8 @@ export const unitData = [
     drive: "direct drive",
     type: "conveyor",
     image: require("../src/unit-imgs/J328.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
   {
     serial: "J329-1",
@@ -110,6 +140,8 @@ export const unitData = [
     drive: "sub resonant",
     type: "feeder",
     image: require("../src/unit-imgs/J329-1.jpg").default,
+    supportFrame: false,
+    covers: false,
   },
   {
     serial: "J329-2",
@@ -117,6 +149,8 @@ export const unitData = [
     drive: "sub resonant",
     type: "screen",
     image: require("../src/unit-imgs/J329-2.jpg").default,
+    supportFrame: false,
+    covers: false,
   },
   {
     serial: "J329-3",
@@ -124,6 +158,8 @@ export const unitData = [
     drive: "sub resonant",
     type: "conveyor",
     image: require("../src/unit-imgs/J329-3.jpg").default,
+    supportFrame: false,
+    covers: false,
   },
   {
     serial: "J329-4",
@@ -131,6 +167,8 @@ export const unitData = [
     drive: "sub resonant",
     type: "feeder",
     image: require("../src/unit-imgs/J329-4.jpg").default,
+    supportFrame: false,
+    covers: true,
   },
   {
     serial: "J330",
@@ -138,6 +176,8 @@ export const unitData = [
     drive: "direct drive",
     type: "screen",
     image: require("../src/unit-imgs/J330.jpg").default,
+    supportFrame: false,
+    covers: false,
   },
   {
     serial: "J334",
@@ -145,6 +185,8 @@ export const unitData = [
     drive: "direct drive",
     type: "screen",
     image: require("../src/unit-imgs/J334.jpg").default,
+    supportFrame: true,
+    covers: false,
   },
 ];
 export default unitData;

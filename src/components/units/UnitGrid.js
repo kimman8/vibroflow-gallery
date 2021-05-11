@@ -2,7 +2,7 @@ import React from "react";
 import { unitData } from "../../unitData";
 import UnitItem from "./UnitItem";
 
-const UnitGrid = ({ searchTerm }) => {
+const UnitGrid = ({ searchTerm, supportFrameCheckbox, coversCheckbox }) => {
   return (
     <section className="cards">
       {unitData
@@ -26,6 +26,20 @@ const UnitGrid = ({ searchTerm }) => {
           ) {
             return unit;
           }
+          //trying to experiment with checkbox searching
+          //only works with supportframe by itself or covers by itself but not both.
+
+          // else
+          // if (
+          //   supportFrameCheckbox === unit.supportFrame &&
+          //   coversCheckbox === unit.covers
+          // ) {
+          //   return unit;
+          // }
+          // else
+          // if (coversCheckbox === unit.covers) {
+          //   return unit;
+          // }
         })
         .map((unit) => (
           <UnitItem unit={unit} key={unit.serial} />

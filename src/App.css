@@ -101,7 +101,8 @@ input[type="text"] {
 }
 
 .card:hover .card-inner {
-  transform: rotateY(180deg);
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
 .card-front,

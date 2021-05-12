@@ -2,7 +2,7 @@ import React from "react";
 import { unitData } from "../../unitData";
 import UnitItem from "./UnitItem";
 
-const UnitGrid = ({ searchTerm, supportFrameCheckbox, coversCheckbox }) => {
+const UnitGrid = ({ searchTerm, supportFrame, driveType, type, covers }) => {
   return (
     <section className="cards">
       {unitData
@@ -26,21 +26,21 @@ const UnitGrid = ({ searchTerm, supportFrameCheckbox, coversCheckbox }) => {
           ) {
             return unit;
           }
-          //trying to experiment with checkbox searching
-          //only works with supportframe by itself or covers by itself but not both.
-
-          // else
-          // if (
-          //   supportFrameCheckbox === unit.supportFrame &&
-          //   coversCheckbox === unit.covers
-          // ) {
-          //   return unit;
-          // }
-          // else
-          // if (coversCheckbox === unit.covers) {
-          //   return unit;
-          // }
         })
+        .filter(
+          driveType === "All"
+            ? (unit) => unit
+            : (unit) => driveType === unit.drive
+        )
+        .filter(type === "All" ? (unit) => unit : (unit) => type === unit.type)
+        .filter(
+          covers === "All" ? (unit) => unit : (unit) => covers === unit.covers
+        )
+        .filter(
+          supportFrame === "All"
+            ? (unit) => unit
+            : (unit) => supportFrame === unit.supportFrame
+        )
         .map((unit) => (
           <UnitItem unit={unit} key={unit.serial} />
         ))}

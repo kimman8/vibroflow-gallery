@@ -6,6 +6,9 @@ const UnitItem = ({ unit }) => {
       <div className="card-inner">
         <div className="card-front">
           <img src={unit.image} alt="" />
+          <p>
+            {unit.serial} - {unit.company}
+          </p>
         </div>
       </div>
     </div>

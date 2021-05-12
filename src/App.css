@@ -142,3 +142,7 @@ input[type="text"] {
     object-fit: contain;
   }
 }
+
+section {
+  margin-bottom: 100px;
+}

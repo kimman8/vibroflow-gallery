@@ -67,7 +67,7 @@ input[type="text"] {
   grid-template-columns: repeat(4, 1fr);
   /* justify-content: space-between;
   align-content: space-between; */
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .card {
@@ -144,5 +144,5 @@ input[type="text"] {
 }
 
 section {
-  margin-bottom: 100px;
+  margin-bottom: 500px;
 }

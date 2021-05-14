@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../img/vibroflow-logo.png";
 
 const Header = () => {
   return (
     <header className="center">
-      <img src={logo} alt="" />
+      <Link to="/">
+        <img src={logo} alt="" />
+      </Link>
     </header>
   );
 };

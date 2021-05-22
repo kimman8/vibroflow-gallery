@@ -3,17 +3,19 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./index.css";
 import React, { useState } from "react";
 import Header from "./components/ui/Header";
+import { unitData } from "./unitData";
 import Unit from "./components/units/Unit";
 import Search from "./components/ui/Search";
 import Home from "./components/ui/Home";
 import About from "./components/ui/About";
 import Nav from "./components/ui/Nav";
+import lol from "../src/unit-imgs/J317.jpg";
 
 const App = () => {
+  console.log(unitData[0]);
   return (
     <Router>
       <div className="container">
-        <Nav />
         <Header className="center" />
         <Switch>
           <Route exact path="/" component={Home} />

@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import Form from "./Form";
 import Header from "./Header";
 import Search from "./Search";
 
 const Home = () => {
   return (
     <Fragment>
-      <h1>cunt</h1>
-      <Search />
+      <Form />
     </Fragment>
   );
 };

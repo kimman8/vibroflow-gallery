@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { unitData } from "../../unitData";
 import UnitItem from "./UnitItem";
+import UnitItemCard from "./UnitItemCard";
 
 const UnitGrid = ({
   searchTerm,
@@ -39,18 +40,16 @@ const UnitGrid = ({
           }
         })
         .filter(
-          driveType === "All"
-            ? (unit) => unit
-            : (unit) => driveType === unit.drive
+          driveType === "" ? (unit) => unit : (unit) => driveType === unit.drive
         )
-        .filter(type === "All" ? (unit) => unit : (unit) => type === unit.type)
+        .filter(type === "" ? (unit) => unit : (unit) => type === unit.type)
         .filter(
           screeningMedia.length === 0
             ? (unit) => unit
             : (unit) => screeningMedia === unit.screeningMedia
         )
         .filter(
-          covers === "All" ? (unit) => unit : (unit) => covers === unit.covers
+          covers === "" ? (unit) => unit : (unit) => covers === unit.covers
         )
         .filter(
           liners.length === 0
@@ -58,22 +57,22 @@ const UnitGrid = ({
             : (unit) => liners === unit.liners
         )
         .filter(
-          supports === "All"
+          supports === ""
             ? (unit) => unit
             : (unit) => supports === unit.supports
         )
         .filter(
-          material === "All"
+          material === ""
             ? (unit) => unit
             : (unit) => material === unit.materialConstruction
         )
         .filter(
-          supportFrame === "All"
+          supportFrame === ""
             ? (unit) => unit
             : (unit) => supportFrame === unit.supportFrame
         )
         .map((unit) => (
-          <UnitItem unit={unit} key={unit.serial} />
+          <UnitItemCard unit={unit} key={unit.serial} />
         ))}
     </section>
   );

@@ -1,32 +1,45 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { unitData } from "../../unitData";
 
-const Unit = ({ match }) => {
-  const [unitProfile, setUnitProfile] = useState([]);
+const Unit = ({ match, unit }) => {
+  const [unitProfile, setUnitProfile] = useState(null);
+
   useEffect(() => {
-    function fetchUnit() {
+    const getUnits = async () => {
+      const unitsFromServer = await fetchUnits();
       setUnitProfile(
-        unitData.find((unit) => unit.serial === match.params.serial)
+        unitsFromServer.find((unit) => unit.serial === match.params.serial)
       );
-    }
-    fetchUnit();
+    };
+    getUnits();
   }, []);
 
+  const fetchUnits = async () => {
+    const res = await fetch("http://localhost:5000/units");
+    const data = await res.json();
+
+    return data;
+  };
+  // console.log(unitProfile.profileImages);
   return (
     <Fragment>
       <div className="container">
-        <h1>{match.params.serial}</h1>
-        <h2>{unitProfile.type}</h2>
-        <img key={unitProfile.serial} src={unitProfile.image} alt="" />
-
-        <img src={unitProfile.profileImages1} alt="" />
-        <img src={unitProfile.profileImages2} alt="" />
-        <img src={unitProfile.profileImages3} alt="" />
-        <img src={unitProfile.profileImages4} alt="" />
-        <img src={unitProfile.profileImages5} alt="" />
-        <img src={unitProfile.profileImages6} alt="" />
-        <img src={unitProfile.profileImages7} alt="" />
-        <h3>Liners: {unitProfile.liners}</h3>
+        {unitProfile && (
+          <div>
+            <h1>{match.params.serial}</h1>
+            <h2>{unitProfile.type}</h2>
+            <h2>{unitProfile.drive}</h2>
+            {unitProfile.profileImages.map((profileImage, index) => (
+              <img
+                src={profileImage}
+                alt=""
+                profileImage={profileImage}
+                key={index}
+                style={{ width: "500px" }}
+              />
+            ))}
+            <h3>Liners: {unitProfile.liners}</h3>
+          </div>
+        )}
       </div>
     </Fragment>
   );

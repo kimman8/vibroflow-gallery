@@ -1,6 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { unitData } from "../../unitData";
+import React, { useState, useEffect } from "react";
 import UnitItem from "./UnitItem";
 import UnitItemCard from "./UnitItemCard";
 
@@ -15,9 +13,25 @@ const UnitGrid = ({
   material,
   screeningMedia,
 }) => {
+  const [units, setUnits] = useState([]);
+  useEffect(() => {
+    const getUnits = async () => {
+      const unitsFromServer = await fetchUnits();
+      setUnits(unitsFromServer);
+    };
+    getUnits();
+  }, []);
+
+  const fetchUnits = async () => {
+    const res = await fetch("http://localhost:5000/units");
+    const data = await res.json();
+
+    return data;
+  };
+  console.log(units);
   return (
     <section className="cards">
-      {unitData
+      {units
         .filter((unit) => {
           if (searchTerm === "") {
             return unit;

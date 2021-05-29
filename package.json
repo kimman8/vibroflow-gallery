@@ -44,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "file-loader": "^1.1.5",
+    "url-loader": "^0.6.2"
   }
 }

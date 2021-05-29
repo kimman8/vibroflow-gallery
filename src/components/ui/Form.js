@@ -195,12 +195,14 @@ const Form = () => {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <div>
-        <TextField
-          id="standard-basic"
-          label="Search"
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <TextField
+        id="standard-basic"
+        label="Search"
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="search"
+        fullWidth="true"
+      />
+      <div className="formContainer">
         <TextField
           id="supportFrame"
           select
@@ -309,18 +311,18 @@ const Form = () => {
             </MenuItem>
           ))}
         </TextField>
-        <UnitGrid
-          searchTerm={searchTerm}
-          supportFrame={supportFrame}
-          driveType={driveType}
-          type={type}
-          covers={covers}
-          liners={liners}
-          screeningMedia={screeningMedia}
-          supports={supports}
-          material={material}
-        />
       </div>
+      <UnitGrid
+        searchTerm={searchTerm}
+        supportFrame={supportFrame}
+        driveType={driveType}
+        type={type}
+        covers={covers}
+        liners={liners}
+        screeningMedia={screeningMedia}
+        supports={supports}
+        material={material}
+      />
     </form>
   );
 };

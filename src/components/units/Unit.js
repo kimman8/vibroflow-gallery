@@ -24,20 +24,21 @@ const Unit = ({ match, unit }) => {
     <Fragment>
       <div className="container">
         {unitProfile && (
-          <div>
+          <div className="center">
             <h1>{match.params.serial}</h1>
             <h2>{unitProfile.type}</h2>
             <h2>{unitProfile.drive}</h2>
+            <h2>Liners: {unitProfile.liners}</h2>
+
             {unitProfile.profileImages.map((profileImage, index) => (
               <img
                 src={profileImage}
                 alt=""
                 profileImage={profileImage}
                 key={index}
-                style={{ width: "500px" }}
+                className="profileImageContainer"
               />
             ))}
-            <h3>Liners: {unitProfile.liners}</h3>
           </div>
         )}
       </div>

@@ -15,7 +15,7 @@ const Search = () => {
 
   return (
     <section className="search">
-      <form>
+      <form className="center">
         {/* <Form /> */}
         <input
           type="text"

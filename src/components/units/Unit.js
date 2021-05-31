@@ -1,8 +1,9 @@
 import React, { Fragment, useState, useEffect } from "react";
+import GadModal from "../ui/GadModal";
+import ImageSlider from "../ui/ImageSlider";
 
 const Unit = ({ match, unit }) => {
   const [unitProfile, setUnitProfile] = useState(null);
-
   useEffect(() => {
     const getUnits = async () => {
       const unitsFromServer = await fetchUnits();
@@ -19,29 +20,17 @@ const Unit = ({ match, unit }) => {
 
     return data;
   };
-  // console.log(unitProfile.profileImages);
   return (
     <Fragment>
-      <div className="container">
-        {unitProfile && (
-          <div className="center">
-            <h1>{match.params.serial}</h1>
-            <h2>{unitProfile.type}</h2>
-            <h2>{unitProfile.drive}</h2>
-            <h2>Liners: {unitProfile.liners}</h2>
-
-            {unitProfile.profileImages.map((profileImage, index) => (
-              <img
-                src={profileImage}
-                alt=""
-                profileImage={profileImage}
-                key={index}
-                className="profileImageContainer"
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      {unitProfile && (
+        <div className="center">
+          <h1>
+            {match.params.serial}-{unitProfile.company}
+          </h1>
+          <ImageSlider unitProfile={unitProfile} />
+          <GadModal />
+        </div>
+      )}
     </Fragment>
   );
 };

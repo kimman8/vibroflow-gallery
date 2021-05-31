@@ -5,6 +5,8 @@
       "company": "Polytrade",
       "drive": "direct drive",
       "type": "screen",
+      "width": "600",
+      "length": "2500",
       "image": "https://i.imgur.com/pXqu49p.jpg",
       "profileImages": [
         "https://i.imgur.com/6ySI7DM.jpg",
@@ -12,6 +14,8 @@
         "https://i.imgur.com/KlECt1W.jpg",
         "https://i.imgur.com/FxyFgma.png"
       ],
+      "GAD": "https://i.imgur.com/FxyFgma.png",
+      "commissioningData": "https://i.imgur.com/FxyFgma.png",
       "supportFrame": "with",
       "covers": "without",
       "screeningMedia": "none",
@@ -384,6 +388,25 @@
       "screeningMedia": "finger",
       "liners": "poly",
       "supports": "steel coils",
+      "materialConstruction": "MS G250"
+    },
+    {
+      "serial": "J335",
+      "company": "RDT",
+      "drive": "direct drive",
+      "type": "feeder",
+      "image": "https://i.imgur.com/ArHs5No.jpg",
+      "profileImages": [
+        "https://i.imgur.com/ArHs5No.jpg",
+        "https://i.imgur.com/Zy12AWt.jpg",
+        "https://i.imgur.com/GINaYMm.jpg",
+        "https://i.imgur.com/JoA8U1n.jpg"
+      ],
+      "supportFrame": "with",
+      "covers": "without",
+      "screeningMedia": "none",
+      "liners": "none",
+      "supports": "oscillating mounts",
       "materialConstruction": "MS G250"
     }
   ]

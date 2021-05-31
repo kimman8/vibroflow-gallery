@@ -1,4 +1,5 @@
 import "./App.css";
+import { Layout } from "../src/components/ui/Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./index.css";
 import React, { useState } from "react";
@@ -11,18 +12,20 @@ import Nav from "./components/ui/Nav";
 
 const App = () => {
   return (
-    <Router>
-      <div className="center">
-        <Header />
-        <div>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/unit-:serial" component={Unit} />
-          </Switch>
+    <React.Fragment>
+      <Router>
+        <div className="center">
+          <Header />
+          <div>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/unit-:serial" component={Unit} />
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </React.Fragment>
   );
 };
 

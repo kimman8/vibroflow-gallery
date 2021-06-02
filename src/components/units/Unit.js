@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
+import HeroSection from "../HeroSection";
 import GadModal from "../ui/GadModal";
 import ImageSlider from "../ui/ImageSlider";
 

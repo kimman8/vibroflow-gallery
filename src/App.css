@@ -98,7 +98,7 @@ input[type="text"] {
 
 .right-arrow {
   position: absolute;
-  top: 50%;
+  top: 80%;
   right: 32px;
   font-size: 3rem;
   color: #000;
@@ -109,7 +109,7 @@ input[type="text"] {
 
 .left-arrow {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 32px;
   font-size: 3rem;
   color: #000;

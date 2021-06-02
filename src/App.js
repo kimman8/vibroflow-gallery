@@ -9,6 +9,7 @@ import Search from "./components/ui/Search";
 import Home from "./components/ui/Home";
 import About from "./components/ui/About";
 import Nav from "./components/ui/Nav";
+import HeroSection from "./components/HeroSection";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <div className="center">
           <Header />
           <div>
+            <HeroSection />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />

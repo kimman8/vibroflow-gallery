@@ -1,6 +1,29 @@
 {
   "units": [
     {
+      "serial": "J316",
+      "company": "Vibroflow",
+      "drive": "sub resonant",
+      "type": "crusher",
+      "width": "600",
+      "length": "2500",
+      "image": "https://i.imgur.com/zuWnEsF.jpg",
+      "profileImages": [
+        "https://i.imgur.com/dWkkEwP.jpg",
+        "https://i.imgur.com/WSSKAkn.jpg",
+        "https://i.imgur.com/zJhD9J5.jpg",
+        "https://i.imgur.com/zuWnEsF.jpg"
+      ],
+      "GAD": "https://i.imgur.com/FxyFgma.png",
+      "commissioningData": "https://i.imgur.com/FxyFgma.png",
+      "supportFrame": "with",
+      "covers": "with",
+      "screeningMedia": "none",
+      "liners": "bisalloy",
+      "supports": "steel coils",
+      "materialConstruction": "MS G250"
+    },
+    {
       "serial": "J317",
       "company": "Polytrade",
       "drive": "direct drive",
@@ -287,6 +310,8 @@
       "type": "feeder",
       "image": "https://i.imgur.com/9odNUby.jpg",
       "profileImages": [
+        "https://i.imgur.com/VaFcjeD.png",
+        "https://i.imgur.com/yi5yBeY.png",
         "https://i.imgur.com/9odNUby.jpg",
         "https://i.imgur.com/9VCinG8.jpg",
         "https://i.imgur.com/GgFRXM7.jpg",
@@ -308,7 +333,8 @@
       "profileImages": [
         "https://i.imgur.com/G6TGuJP.jpg",
         "https://i.imgur.com/VF3iUGf.jpg",
-        "https://i.imgur.com/Uv7N7Qv.jpg"
+        "https://i.imgur.com/Uv7N7Qv.jpg",
+        "https://i.imgur.com/bpq8mfE.png"
       ],
       "supportFrame": "without",
       "covers": "without",
@@ -326,7 +352,8 @@
       "profileImages": [
         "https://i.imgur.com/Ce3hBeV.jpg",
         "https://i.imgur.com/aOmvlrX.jpg",
-        "https://i.imgur.com/Db8ZDno.jpg"
+        "https://i.imgur.com/Db8ZDno.jpg",
+        "https://i.imgur.com/Pb8j6M0.png"
       ],
       "supportFrame": "without",
       "covers": "without",
@@ -345,7 +372,8 @@
         "https://i.imgur.com/5hXoUd0.jpg",
         "https://i.imgur.com/O0mAgFP.jpg",
         "https://i.imgur.com/ffU3ND6.jpg",
-        "https://i.imgur.com/mTK3s3P.jpg"
+        "https://i.imgur.com/mTK3s3P.jpg",
+        "https://i.imgur.com/MauoJmg.png"
       ],
       "supportFrame": "without",
       "covers": "with",

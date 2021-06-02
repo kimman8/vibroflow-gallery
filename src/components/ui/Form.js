@@ -72,6 +72,10 @@ const typeOptions = [
     value: "cooler",
     label: "Cooler",
   },
+  {
+    value: "crusher",
+    label: "Crusher",
+  },
 ];
 const materialOptions = [
   {

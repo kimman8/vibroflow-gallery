@@ -76,6 +76,10 @@ const typeOptions = [
     value: "crusher",
     label: "Crusher",
   },
+  {
+    value: "spiral",
+    label: "Spiral",
+  },
 ];
 const materialOptions = [
   {

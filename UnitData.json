@@ -1,6 +1,29 @@
 {
   "units": [
     {
+      "serial": "J315",
+      "company": "Vibroflow",
+      "drive": "direct drive",
+      "type": "hopper",
+      "width": "600",
+      "length": "2500",
+      "image": "https://i.imgur.com/zuWnEsF.jpg",
+      "profileImages": [
+        "https://i.imgur.com/dWkkEwP.jpg",
+        "https://i.imgur.com/WSSKAkn.jpg",
+        "https://i.imgur.com/zJhD9J5.jpg",
+        "https://i.imgur.com/zuWnEsF.jpg"
+      ],
+      "GAD": "https://i.imgur.com/FxyFgma.png",
+      "commissioningData": "https://i.imgur.com/FxyFgma.png",
+      "supportFrame": "with",
+      "covers": "without",
+      "screeningMedia": "none",
+      "liners": "none",
+      "supports": "oscillating mounts",
+      "materialConstruction": "MS G250"
+    },
+    {
       "serial": "J316",
       "company": "Vibroflow",
       "drive": "sub resonant",

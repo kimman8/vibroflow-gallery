@@ -5,6 +5,7 @@ const Nav = () => {
   return (
     <div>
       <h1>Homez</h1>
+      <h2>yo</h2>
     </div>
   );
 };

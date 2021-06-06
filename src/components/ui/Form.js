@@ -4,6 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import UnitGrid from "../units/UnitGrid";
 import Search from "./Search";
+import Content from "./Content";
 
 const supportFrameOptions = [
   {
@@ -321,7 +322,7 @@ const Form = () => {
           ))}
         </TextField>
       </div>
-      <UnitGrid
+      <Content
         searchTerm={searchTerm}
         supportFrame={supportFrame}
         driveType={driveType}

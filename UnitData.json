@@ -142,7 +142,7 @@
     },
     {
       "serial": "J298",
-      "company": "Liberty",
+      "company": "Northern Agencies",
       "drive": "sub resonant",
       "type": "feeder",
       "width": "600",
@@ -426,7 +426,7 @@
     },
     {
       "serial": "J312",
-      "company": "??",
+      "company": "Liberty",
       "drive": "direct drive",
       "type": "feeder",
       "width": "600",
@@ -495,7 +495,7 @@
     },
     {
       "serial": "J315",
-      "company": "??",
+      "company": "Bradken",
       "drive": "direct drive",
       "type": "hopper",
       "width": "600",

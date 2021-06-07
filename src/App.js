@@ -20,7 +20,7 @@ const App = () => {
       <Router>
         <Nav />
         <div className="center">
-          <Header />
+          {/* <Header /> */}
           <div>
             <Hero />
             <Content />

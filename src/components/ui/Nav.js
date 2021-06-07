@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Nav = () => {
   return (
     <nav
-      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono"
+      className="flex justify-between items-center h-24 bg-white text-black relative shadow-sm font-mono"
       role="navigation"
     >
-      <Link to="/" className="pl-8">
-        Vibroflow
+      <Link to="/" className="pl-1">
+        <Header />
       </Link>
       <div className="px-4 cursor-pointer md:hidden">
         <svg

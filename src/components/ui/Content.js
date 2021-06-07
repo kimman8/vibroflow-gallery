@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "../ui/Card";
+import CardImage from "./CardImage";
 
 const Content = ({
   searchTerm,
@@ -66,7 +67,7 @@ const Content = ({
             )
             .filter(type === "" ? (unit) => unit : (unit) => type === unit.type)
             .filter(
-              screeningMedia === "" || []
+              screeningMedia === ""
                 ? (unit) => unit
                 : (unit) => screeningMedia === unit.screeningMedia
             )
@@ -92,22 +93,7 @@ const Content = ({
                 : (unit) => supportFrame === unit.supportFrame
             )
             .map((unit) => (
-              <div className="flex flex-col justify-center items-center bg-white font-mono py-10">
-                <img
-                  src={unit.image}
-                  unit={unit}
-                  key={unit.serial}
-                  className="rounded mb-5 shadow"
-                />
-                <div className="flex flex-col justify-center items-center">
-                  <h2 className="text-2xl mb-2">
-                    {unit.serial} - {unit.company}
-                  </h2>
-                  <p className="mb-2">
-                    {unit.drive} {unit.type}
-                  </p>
-                </div>
-              </div>
+              <CardImage unit={unit} key={unit.serial} />
             ))}
         </div>
       )}

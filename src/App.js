@@ -22,7 +22,7 @@ const App = () => {
         <div className="center">
           {/* <Header /> */}
           <div>
-            <Hero />
+            {/* <Hero /> */}
             <Content />
             <Switch>
               <Route exact path="/" component={Home} />

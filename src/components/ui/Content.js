@@ -34,33 +34,34 @@ const Content = ({
   console.log(units);
   return (
     <section className="container mx-auto">
-      {isLoading ? (
-        <h1 className="text-6xl text-center mx-auto mt-32">Loading..</h1>
-      ) : (
+      {units && (
+        // {isLoading ? (
+        //   <h1 className="text-6xl text-center mx-auto mt-32">Loading..</h1>
+        // ) : (
         <div className="grid grid-cols-3 gap-4">
           {units
-            .filter((unit) => {
-              if (searchTerm === "") {
-                return unit;
-              } else if (
-                unit.type.toLowerCase() ||
-                [].includes(searchTerm.toLowerCase())
-              ) {
-                return unit;
-              } else if (
-                unit.company.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return unit;
-              } else if (
-                unit.serial.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return unit;
-              } else if (
-                unit.drive.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return unit;
-              }
-            })
+            // .filter((unit) => {
+            //   if (searchTerm === "") {
+            //     return unit;
+            //   } else if (
+            //     unit.type.toLowerCase() ||
+            //     [].includes(searchTerm.toLowerCase())
+            //   ) {
+            //     return unit;
+            //   } else if (
+            //     unit.company.toLowerCase().includes(searchTerm.toLowerCase())
+            //   ) {
+            //     return unit;
+            //   } else if (
+            //     unit.serial.toLowerCase().includes(searchTerm.toLowerCase())
+            //   ) {
+            //     return unit;
+            //   } else if (
+            //     unit.drive.toLowerCase().includes(searchTerm.toLowerCase())
+            //   ) {
+            //     return unit;
+            //   }
+            // })
             .filter(
               driveType === ""
                 ? (unit) => unit
@@ -98,6 +99,7 @@ const Content = ({
             ))}
         </div>
       )}
+      {/* )} */}
     </section>
   );
 };

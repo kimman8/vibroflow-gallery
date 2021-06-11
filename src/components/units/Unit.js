@@ -1,6 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-// import Card from "../ui/Card";
-import HeroSection from "../HeroSection";
 import GadModal from "../ui/GadModal";
 import ImageSlider from "../ui/ImageSlider";
 
@@ -25,11 +23,10 @@ const Unit = ({ match, unit }) => {
   return (
     <Fragment>
       {unitProfile && (
-        <div className="center">
-          <h1 className="text-5xl">
+        <div className="container mx-auto ">
+          <h1 className="text-5xl font-mono flex justify-center mt-3">
             {match.params.serial}-{unitProfile.company}
           </h1>
-          {/* <Card unit={unit} /> */}
           <ImageSlider unitProfile={unitProfile} />
           <GadModal />
         </div>

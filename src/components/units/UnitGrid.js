@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import UnitItem from "./UnitItem";
-import UnitItemCard from "./UnitItemCard";
-import Card from "../ui/Card";
+import CardImage from "../ui/CardImage";
 
 const UnitGrid = ({
   searchTerm,
@@ -31,9 +29,8 @@ const UnitGrid = ({
 
     return data;
   };
-  console.log(units);
   return (
-    <section className="container mx-auto">
+    <section>
       {isLoading ? (
         <h1 className="text-6xl text-center mx-auto mt-32">Loading..</h1>
       ) : (
@@ -95,7 +92,7 @@ const UnitGrid = ({
                 : (unit) => supportFrame === unit.supportFrame
             )
             .map((unit) => (
-              <Card unit={unit} key={unit.serial} />
+              <CardImage unit={unit} key={unit.serial} />
             ))}
         </div>
       )}

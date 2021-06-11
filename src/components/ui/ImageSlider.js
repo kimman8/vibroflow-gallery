@@ -33,7 +33,7 @@ const ImageSlider = ({ unitProfile }) => {
               alt=""
               profileImage={profileImage}
               key={index}
-              className="profileImageContainer"
+              className="border-8 border-yellow-400 rounded-3xl border-opacity-100 max-w-screen-2xl max-h-screen"
             />
           )}
         </div>

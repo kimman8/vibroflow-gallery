@@ -28,16 +28,16 @@ const Nav = () => {
         </svg>
       </div>
       <div className="pr-8 md:block hidden">
-        <Link className="p-4" to="/">
+        <Link className="p-4 font-mono" to="/">
           Home
         </Link>
-        <Link className="p-4" to="/menu">
+        <Link className="p-4 font-mono" to="/menu">
           Menu
         </Link>
-        <Link className="p-4" to="/about">
+        <Link className="p-4 font-mono" to="/about">
           About
         </Link>
-        <Link className="p-4" to="/contact">
+        <Link className="p-4 font-mono" to="/contact">
           Contact
         </Link>
       </div>

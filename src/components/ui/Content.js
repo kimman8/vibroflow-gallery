@@ -30,38 +30,35 @@ const Content = ({
 
     return data;
   };
-  console.log(searchTerm);
   console.log(units);
   return (
     <section className="container mx-auto">
-      {units && (
-        // {isLoading ? (
-        //   <h1 className="text-6xl text-center mx-auto mt-32">Loading..</h1>
-        // ) : (
+      {isLoading ? (
+        <h1 className="text-6xl text-center mx-auto mt-32">Loading..</h1>
+      ) : (
         <div className="grid grid-cols-3 gap-4">
           {units
-            // .filter((unit) => {
-            //   if (searchTerm === "") {
-            //     return unit;
-            //   } else if (
-            //     unit.type.toLowerCase() ||
-            //     [].includes(searchTerm.toLowerCase())
-            //   ) {
-            //     return unit;
-            //   } else if (
-            //     unit.company.toLowerCase().includes(searchTerm.toLowerCase())
-            //   ) {
-            //     return unit;
-            //   } else if (
-            //     unit.serial.toLowerCase().includes(searchTerm.toLowerCase())
-            //   ) {
-            //     return unit;
-            //   } else if (
-            //     unit.drive.toLowerCase().includes(searchTerm.toLowerCase())
-            //   ) {
-            //     return unit;
-            //   }
-            // })
+            .filter((unit) => {
+              if (searchTerm === "") {
+                return unit;
+              } else if (
+                unit.type.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return unit;
+              } else if (
+                unit.company.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return unit;
+              } else if (
+                unit.serial.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return unit;
+              } else if (
+                unit.drive.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return unit;
+              }
+            })
             .filter(
               driveType === ""
                 ? (unit) => unit
@@ -69,7 +66,7 @@ const Content = ({
             )
             .filter(type === "" ? (unit) => unit : (unit) => type === unit.type)
             .filter(
-              screeningMedia === ""
+              screeningMedia.length === 0
                 ? (unit) => unit
                 : (unit) => screeningMedia === unit.screeningMedia
             )
@@ -77,7 +74,9 @@ const Content = ({
               covers === "" ? (unit) => unit : (unit) => covers === unit.covers
             )
             .filter(
-              liners === "" ? (unit) => unit : (unit) => liners === unit.liners
+              liners.length === 0
+                ? (unit) => unit
+                : (unit) => liners === unit.liners
             )
             .filter(
               supports === ""
@@ -99,7 +98,6 @@ const Content = ({
             ))}
         </div>
       )}
-      {/* )} */}
     </section>
   );
 };

@@ -3,8 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import UnitGrid from "../units/UnitGrid";
-import Search from "./Search";
-import Content from "./Content";
+import { useLocation } from "react-router-dom";
 
 const supportFrameOptions = [
   {
@@ -153,6 +152,10 @@ const screeningMediaOptions = [
     label: "Perforated Plate",
   },
   {
+    value: "ball deck",
+    label: "Ball Deck",
+  },
+  {
     value: "finger",
     label: "Finger",
   },
@@ -180,8 +183,6 @@ const useStyles = makeStyles((theme) => ({
       width: "25ch",
       background: "white",
       borderRadius: 5,
-      padding: "5px 20px",
-      // marginTop: "50px",
     },
   },
   colorSecondary: {
@@ -202,138 +203,151 @@ const Form = () => {
   const [screeningMedia, setScreeningMedia] = useState("");
   const [supports, setSupports] = useState("");
   const [material, setMaterial] = useState("");
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
+  let location = useLocation();
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <TextField
-        id="standard-basic"
-        label="Search"
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="search"
-        fullWidth="true"
-      />
-      <div className="formContainer">
-        <TextField
-          id="supportFrame"
-          select
-          label="Support Frame"
-          value={supportFrame}
-          onChange={(e) => setSupportFrame(e.target.value)}
-          helperText=""
-          color="secondary"
-        >
-          {supportFrameOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
-          id="covers"
-          select
-          label="Covers"
-          value={covers}
-          onChange={(e) => setCovers(e.target.value)}
-          helperText=""
-        >
-          {coverOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
-          id="material"
-          select
-          label="Material Construction"
-          value={material}
-          onChange={(e) => setMaterial(e.target.value)}
-        >
-          {materialOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
-          id="driveType"
-          select
-          label="Drive Type"
-          value={driveType}
-          onChange={(e) => setDriveType(e.target.value)}
-          helperText=""
-        >
-          {driveTypeOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
-          id="type"
-          select
-          label="Type"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          {typeOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
-          id="screeningMedia"
-          select
-          label="Screening Media"
-          value={screeningMedia}
-          onChange={(e) => setScreeningMedia(e.target.value)}
-        >
-          {screeningMediaOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
-          id="liners"
-          select
-          label="Liners"
-          value={liners}
-          onChange={(e) => setLiners(e.target.value)}
-        >
-          {linerOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
-          id="supports"
-          select
-          label="Supports"
-          value={supports}
-          onChange={(e) => setSupports(e.target.value)}
-        >
-          {supportOptions.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-      </div>
-      <Content
-        searchTerm={searchTerm}
-        supportFrame={supportFrame}
-        driveType={driveType}
-        type={type}
-        covers={covers}
-        liners={liners}
-        screeningMedia={screeningMedia}
-        supports={supports}
-        material={material}
-      />
-    </form>
+    <section className=" container  mx-auto">
+      <form className={classes.root} noValidate autoComplete="off">
+        <div>
+          <TextField
+            id="standard-basic"
+            label="Search"
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <div className="grid grid-cols-4 gap-4">
+            <TextField
+              id="supportFrame"
+              select
+              label="Support Frame"
+              value={supportFrame}
+              onChange={(e) => setSupportFrame(e.target.value)}
+              helperText=""
+              color="secondary"
+            >
+              {supportFrameOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              id="covers"
+              select
+              label="Covers"
+              value={covers}
+              onChange={(e) => setCovers(e.target.value)}
+              helperText=""
+            >
+              {coverOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              id="material"
+              select
+              label="Material Construction"
+              value={material}
+              onChange={(e) => setMaterial(e.target.value)}
+            >
+              {materialOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              id="driveType"
+              select
+              label="Drive Type"
+              value={driveType}
+              onChange={(e) => setDriveType(e.target.value)}
+              helperText=""
+            >
+              {driveTypeOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              id="type"
+              select
+              label="Type"
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+            >
+              {typeOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              id="screeningMedia"
+              select
+              label="Screening Media"
+              value={screeningMedia}
+              onChange={(e) => setScreeningMedia(e.target.value)}
+            >
+              {screeningMediaOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              id="liners"
+              select
+              label="Liners"
+              value={liners}
+              onChange={(e) => setLiners(e.target.value)}
+            >
+              {linerOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              id="supports"
+              select
+              label="Supports"
+              value={supports}
+              onChange={(e) => setSupports(e.target.value)}
+            >
+              {supportOptions.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <button
+              className="bg-red-500 hover:bg-red-600 mt-1 ml-1 text-bold rounded text-white font-mono py-2 px-4"
+              onClick={refreshPage}
+            >
+              Clear Filters
+            </button>
+          </div>
+          <UnitGrid
+            searchTerm={searchTerm}
+            supportFrame={supportFrame}
+            driveType={driveType}
+            type={type}
+            covers={covers}
+            liners={liners}
+            screeningMedia={screeningMedia}
+            supports={supports}
+            material={material}
+          />
+        </div>
+      </form>
+    </section>
   );
 };
 export default Form;

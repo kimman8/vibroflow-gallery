@@ -3,7 +3,7 @@ import logo from "../../img/vibroflow-logo.png";
 
 const Header = () => {
   return (
-    <header className="w-60 flex items-center ml-12">
+    <header className="w-60 flex items-center ml-12 hover:opacity-75">
       <img src={logo} alt="" />
     </header>
   );

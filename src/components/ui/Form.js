@@ -210,7 +210,7 @@ const Form = () => {
   let location = useLocation();
 
   return (
-    <section className="container max-w-full px-52 mx-auto">
+    <section className="container max-w-full px-52 mx-auto ">
       <form className={classes.root} noValidate autoComplete="off">
         <div>
           <TextField

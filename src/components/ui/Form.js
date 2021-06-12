@@ -210,7 +210,7 @@ const Form = () => {
   let location = useLocation();
 
   return (
-    <section className=" container  mx-auto">
+    <section className="container max-w-full px-52 mx-auto">
       <form className={classes.root} noValidate autoComplete="off">
         <div>
           <TextField
@@ -328,7 +328,7 @@ const Form = () => {
               ))}
             </TextField>
             <button
-              className="bg-red-500 hover:bg-red-600 mt-1 ml-1 text-bold rounded text-white font-mono py-2 px-4"
+              className="bg-red-500 hover:bg-red-600 ring ring-pink-600 ring-offset-2 mt-1 mb-5 ml-1 text-bold rounded text-white font-mono py-2 px-4"
               onClick={refreshPage}
             >
               Clear Filters

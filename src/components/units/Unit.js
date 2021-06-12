@@ -23,7 +23,7 @@ const Unit = ({ match, unit }) => {
   return (
     <Fragment>
       {unitProfile && (
-        <div className="container mx-auto ">
+        <div className="container mx-auto">
           <h1 className="text-5xl font-mono flex justify-center mt-3">
             {match.params.serial}-{unitProfile.company}
           </h1>

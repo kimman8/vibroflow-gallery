@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 
 const Nav = () => {
+  const [navbar, setNavbar] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0.1) {
+        setNavbar(true);
+        // document.body.classList.add("bodyPaddingTop");
+      } else {
+        // document.body.classList.remove("bodyPaddingTop");
+        setNavbar(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
-      className="flex justify-between items-center h-24 bg-gray-800 text-white relative shadow-sm font-mono sticky top-0 "
+      className={`flex justify-between items-center h-24 bg-gray-800 text-white relative shadow-sm font-mono transition duration-500 ease-in-out ${
+        navbar && `sticky top-0 z-10 shadow-md`
+      }`}
       role="navigation"
     >
       <Link to="/" className="pl-1">

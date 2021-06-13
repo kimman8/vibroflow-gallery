@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardImage from "../ui/CardImage";
+import Spinner from "../ui/Spinner";
 
 const UnitGrid = ({
   searchTerm,
@@ -32,7 +33,10 @@ const UnitGrid = ({
   return (
     <section>
       {isLoading ? (
-        <h1 className="text-6xl text-center mx-auto mt-32">Loading..</h1>
+        <div>
+          <h1 className="text-6xl text-center mx-auto mt-32">Loading..</h1>
+          <Spinner />
+        </div>
       ) : (
         <div>
           <h1>{units.length} units found</h1>

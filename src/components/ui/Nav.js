@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import SearchBar from "./SearchBar";
 
 const Nav = () => {
   const [navbar, setNavbar] = useState(false);
@@ -19,14 +20,15 @@ const Nav = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center h-24 bg-gray-800 text-white relative shadow-sm font-mono transition duration-500 ease-in-out ${
-        navbar && `sticky top-0 z-10 shadow-md`
+      className={`flex justify-between items-center h-16 bg-gray-800 text-white relative shadow-sm font-mono transition duration-500 ease-in-out ${
+        navbar && `sticky top-0 z-10 shadow-lg`
       }`}
       role="navigation"
     >
       <Link to="/" className="pl-1">
         <Header />
       </Link>
+      <SearchBar />
       <div className="px-4 cursor-pointer md:hidden hover:opacity-75">
         <svg
           className="w-6 h-6"

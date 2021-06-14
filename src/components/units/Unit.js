@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import GadModal from "../ui/GadModal";
+import ImageGallery from "../ui/ImageGallery";
 import ImageSlider from "../ui/ImageSlider";
 
 const Unit = ({ match, unit }) => {
@@ -24,11 +25,14 @@ const Unit = ({ match, unit }) => {
     <Fragment>
       {unitProfile && (
         <div className="container mx-auto">
-          <h1 className="text-5xl font-mono flex justify-center mt-3">
-            {match.params.serial}-{unitProfile.company}
-          </h1>
-          <ImageSlider unitProfile={unitProfile} />
-          <GadModal />
+          <div className="flex justify-between items-center my-3">
+            <h1 className="text-5xl font-mono ">
+              {match.params.serial}-{unitProfile.company}
+            </h1>
+            <GadModal />
+          </div>
+          <ImageSlider unitProfile={unitProfile} className="mb-10" />
+          <ImageGallery unitProfile={unitProfile} />
         </div>
       )}
     </Fragment>

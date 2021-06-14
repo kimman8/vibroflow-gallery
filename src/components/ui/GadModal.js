@@ -11,11 +11,8 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  min-width: 100px;
-  padding: 16px 32px;
   border-radius: 4px;
   border: none;
-  background: #141414;
   color: #fff;
   font-size: 24px;
   cursor: pointer;
@@ -29,7 +26,12 @@ const GadModal = () => {
   return (
     <React.Fragment>
       <Container>
-        <Button onClick={openModal}>GAD</Button>
+        <Button
+          onClick={openModal}
+          className="hover:bg-indigo-700 font-mono bg-indigo-500 px-6 py-2 text-xl ring ring-indigo-600  ring-offset-2 text-bold "
+        >
+          GAD
+        </Button>
         <Modal showModal={showModal} setShowModal={setShowModal} />
         <GlobalStyle />
       </Container>

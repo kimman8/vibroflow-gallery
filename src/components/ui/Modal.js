@@ -21,7 +21,7 @@ const ModalWrapper = styled.div`
   color: #000;
   display: grid;
   grid-template-columns: 1fr;
-  position: relative;
+  position: absolute;
   z-index: 10;
   border-radius: 10px;
 `;
@@ -29,9 +29,9 @@ const ModalWrapper = styled.div`
 const ModalImg = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   background: #000;
-  border: 10px solid green;
+  border: 5px solid green;
 `;
 
 // const ModalContent = styled.div`

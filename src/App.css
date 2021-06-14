@@ -6,8 +6,15 @@
 
 html,
 body {
-  /* background: #000 url("img/bg.jpg") no-repeat center center/cover; */
-  background: white;
+  /* background: #000 url("img/cool-background.png") center center/cover; */
+  background-color: #dcd9d4;
+  background-image: linear-gradient(
+    to top,
+    #dad4ec 0%,
+    #dad4ec 1%,
+    #f3e7e9 100%
+  );
+
   height: 100vh;
 }
 
@@ -79,7 +86,7 @@ header {
 }
 
 .search-btn {
-  color: #e84118;
+  color: green;
   float: right;
   width: 40px;
   height: 40px;

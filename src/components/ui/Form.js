@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import UnitGrid from "../units/UnitGrid";
@@ -213,8 +213,8 @@ const Form = () => {
   return (
     <section className="container max-w-full px-52 mx-auto ">
       <form className={classes.root} noValidate autoComplete="off">
-        <div className="mt-5">
-          <div className="flex justify-between">
+        <div className="mt-5 ">
+          <div className="flex justify-between items-center">
             <TextField
               id="standard-basic"
               label="Search"
@@ -231,7 +231,7 @@ const Form = () => {
             </button>
           </div>
           {showFilters && (
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-4 gap-4 bg-opacity-30 bg-clip-border p-2 bg-indigo-200 border-4 border-indigo-300 rounded">
               <TextField
                 id="supportFrame"
                 select

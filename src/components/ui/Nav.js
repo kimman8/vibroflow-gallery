@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import SearchBar from "./SearchBar";
 
 const Nav = () => {
   const [navbar, setNavbar] = useState(false);
@@ -28,7 +27,6 @@ const Nav = () => {
       <Link to="/" className="pl-1">
         <Header />
       </Link>
-      <SearchBar />
       <div className="px-4 cursor-pointer md:hidden hover:opacity-75">
         <svg
           className="w-6 h-6"

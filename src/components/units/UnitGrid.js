@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CardImage from "../ui/CardImage";
+import Descending from "../ui/Descending";
 import Spinner from "../ui/Spinner";
+import View from "../ui/View";
 
 const UnitGrid = ({
   searchTerm,
@@ -16,6 +18,17 @@ const UnitGrid = ({
   const [units, setUnits] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [parsedUnits, setParsedUnits] = useState([]);
+  const [reverse, setReverse] = useState(false);
+  const [view, setView] = useState(false);
+  const onReverse = (e) => {
+    e.preventDefault();
+    setReverse(!reverse);
+  };
+
+  const onView = (e) => {
+    e.preventDefault();
+    setView(!view);
+  };
 
   useEffect(() => {
     const getUnits = async () => {
@@ -94,10 +107,18 @@ const UnitGrid = ({
           <h1 className="flex justify-center mb-5 text-gray-500 font-mono">
             {getParsedUnits().length} units to show
           </h1>
-          <div className="grid grid-cols-4 gap-6">
-            {getParsedUnits().map((unit) => (
-              <CardImage unit={unit} key={unit.serial} />
-            ))}
+          <div className="flex justify-between">
+            <Descending onReverse={onReverse} />
+            <View onView={onView} />
+          </div>
+          <div className={`grid grid-cols-${view ? "3" : "4"} gap-6`}>
+            {reverse
+              ? getParsedUnits().map((unit) => (
+                  <CardImage unit={unit} key={unit.serial} />
+                ))
+              : getParsedUnits()
+                  .reverse()
+                  .map((unit) => <CardImage unit={unit} key={unit.serial} />)}
           </div>
         </div>
       )}

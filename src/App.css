@@ -27,6 +27,7 @@ header {
 
 .slider {
   position: relative;
+  z-index: 1;
   /* height: 100vh; */
   display: flex;
   justify-content: center;
@@ -34,9 +35,9 @@ header {
 }
 
 .right-arrow {
-  position: absolute;
+  position: fixed;
   top: 50%;
-  right: 32px;
+  right: 520px;
   font-size: 3rem;
   color: #000;
   z-index: 10;
@@ -45,9 +46,9 @@ header {
 }
 
 .left-arrow {
-  position: absolute;
+  position: fixed;
   top: 50%;
-  left: 32px;
+  left: 520px;
   font-size: 3rem;
   color: #000;
   z-index: 10;
@@ -59,11 +60,21 @@ header {
   opacity: 0;
   transition-duration: 1s ease;
 }
+.slideThumbnail {
+  transition-duration: 1s ease;
+  opacity: 0.7;
+}
 
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+}
+.slideThumbnail.active {
+  border: tomato solid 2px;
+  padding: 2px;
+  border-radius: 2px;
+  opacity: 1;
 }
 
 .search-box {

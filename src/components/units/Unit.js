@@ -26,13 +26,13 @@ const Unit = ({ match, unit }) => {
       {unitProfile && (
         <div className="container mx-auto">
           <div className="flex justify-between items-center my-3">
-          <GadModal />
-            <h1 className="text-5xl font-mono text-gray-800">
+            <h1 className="text-5xl font-mono ">
               {match.params.serial}-{unitProfile.company}
             </h1>
+            <GadModal />
           </div>
           <ImageSlider unitProfile={unitProfile} className="mb-10" />
-          <ImageGallery unitProfile={unitProfile} />
+          {/* <ImageGallery unitProfile={unitProfile} /> */}
         </div>
       )}
     </Fragment>

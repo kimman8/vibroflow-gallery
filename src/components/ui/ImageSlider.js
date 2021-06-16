@@ -20,8 +20,8 @@ const ImageSlider = ({ unitProfile }) => {
 
   return (
     <section className="slider">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <FaArrowAltCircleLeft className="left-arrow hover:text-green-500 " onClick={prevSlide} />
+      <FaArrowAltCircleRight className="right-arrow hover:text-green-500" onClick={nextSlide} />
       {unitProfile.profileImages.map((profileImage, index) => (
         <div
           className={index === current ? "slide active " : "slide"}

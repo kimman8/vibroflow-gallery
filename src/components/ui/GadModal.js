@@ -28,7 +28,7 @@ const GadModal = () => {
       <Container>
         <Button
           onClick={openModal}
-          className="hover:bg-indigo-700 font-mono bg-indigo-500 px-6 py-2 text-xl ring ring-indigo-600  ring-offset-2 text-bold "
+          className="hover:bg-indigo-700 font-mono bg-indigo-500 px-4 py-2 text-xl ring ring-indigo-600  ring-offset-2 text-bold "
         >
           GAD
         </Button>

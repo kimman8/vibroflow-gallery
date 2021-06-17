@@ -11,7 +11,7 @@ const CardImage = ({ unit }) => {
           key={unit.serial}
           className="hover:opacity-90 border-b-2 border-pink-700"
         />
-        <h1 className="text-xl font-bold">
+        <h1 className="text-base md:text-lg lg:text-xl font-bold">
           {unit.serial} - {unit.company}
         </h1>
         <p className="capitalize font-thin text-sm text-black">

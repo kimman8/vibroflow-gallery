@@ -25,8 +25,8 @@ const Unit = ({ match, unit }) => {
     <Fragment>
       {unitProfile && (
         <div className="container mx-auto">
-          <div className="flex justify-between items-center my-3">
-            <h1 className="text-5xl font-mono ">
+          <div className="flex justify-between items-center my-5">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-mono ">
               {match.params.serial}-{unitProfile.company}
             </h1>
             <GadModal />

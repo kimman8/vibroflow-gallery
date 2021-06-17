@@ -50,7 +50,7 @@ const ImageSlider = ({ unitProfile }) => {
                 alt=""
                 profileImage={profileImage}
                 key={index}
-                className="border-4 border-yellow-400  rounded-xl border-opacity-75 max-w-xs md:max-w-md lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl hover:opacity-90"
+                className="border-4 border-yellow-400  rounded-xl border-opacity-75 max-w-xs md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl max-h-32 hover:opacity-90"
               />
             )}
           </div>
@@ -69,7 +69,7 @@ const ImageSlider = ({ unitProfile }) => {
               alt=""
               profileImage={profileImage}
               key={index}
-              className=" max-h-24 max-w-2xl hover:opacity-90 mx-1 cursor-pointer"
+              className=" max-h-12 max-w-2xl md:max-h-16 lg:max-h-20 xl:max-h-28 hover:opacity-90 mx-1 cursor-pointer"
               // onClick={(e) => console.log(e.target.src)}
               onClick={(e) => selector}
             />

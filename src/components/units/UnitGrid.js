@@ -99,7 +99,9 @@ const UnitGrid = ({
     <section>
       {isLoading ? (
         <div className="flex flex-col justify-center">
-          <h1 className="text-8xl text-center mt-32 font-mono">Loading..</h1>
+          <h1 className="text-xl md: text-3xl lg:text-5xl xl:text-7xl text-center mt-32 font-mono">
+            Loading..
+          </h1>
           <Spinner />
         </div>
       ) : (

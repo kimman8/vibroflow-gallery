@@ -98,7 +98,7 @@ const UnitGrid = ({
   return (
     <section>
       {isLoading ? (
-        <div className="flex  flex-col justify-center">
+        <div className="flex flex-col justify-center">
           <h1 className="text-8xl text-center mt-32 font-mono">Loading..</h1>
           <Spinner />
         </div>
@@ -111,7 +111,8 @@ const UnitGrid = ({
             <Descending onReverse={onReverse} />
             <View onView={onView} />
           </div>
-          <div className={`grid grid-cols-${view ? "3" : "4"} gap-6`}>
+          {/* <div className={`grid grid-cols-${view ? "3" : "4"} gap-6`}> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
             {reverse
               ? getParsedUnits().map((unit) => (
                   <CardImage unit={unit} key={unit.serial} />

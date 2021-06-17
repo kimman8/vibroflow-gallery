@@ -211,7 +211,7 @@ const Form = () => {
   let location = useLocation();
 
   return (
-    <section className="container max-w-full px-52 mx-auto ">
+    <section className="2xl:container px-1 mx-auto ">
       <form className={classes.root} noValidate autoComplete="off">
         <div className="mt-5 ">
           <div className="flex justify-between items-center">

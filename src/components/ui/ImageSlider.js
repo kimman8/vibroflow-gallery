@@ -13,9 +13,13 @@ const ImageSlider = ({ unitProfile }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  // const selector = () => {
-  //   setCurrent(unitProfile.profileImages.find(unit => ))
-  // }
+  const selector = (e) => {
+    setCurrent(
+      unitProfile.profileImages.findIndex(
+        (profileImage) => profileImage === e.target.src
+      )
+    );
+  };
 
   if (
     !Array.isArray(unitProfile.profileImages) ||
@@ -46,7 +50,7 @@ const ImageSlider = ({ unitProfile }) => {
                 alt=""
                 profileImage={profileImage}
                 key={index}
-                className="border-4 border-yellow-400  rounded-xl border-opacity-75 max-h-96 max-w-7xl hover:opacity-90"
+                className="border-4 border-yellow-400  rounded-xl border-opacity-75 max-w-xs md:max-w-md lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl hover:opacity-90"
               />
             )}
           </div>
@@ -65,8 +69,9 @@ const ImageSlider = ({ unitProfile }) => {
               alt=""
               profileImage={profileImage}
               key={index}
-              className=" max-h-24 max-w-2xl hover:opacity-90 mx-1"
-              onClick={(e) => console.log(e.target.src)}
+              className=" max-h-24 max-w-2xl hover:opacity-90 mx-1 cursor-pointer"
+              // onClick={(e) => console.log(e.target.src)}
+              onClick={(e) => selector}
             />
           </div>
         ))}

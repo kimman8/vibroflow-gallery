@@ -1,21 +1,21 @@
-import Dropdown from "react-bootstrap/Dropdown";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const dropdown = () => {
+const Dropdown = () => {
   return (
-    <div>
-      <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Dropdown Button
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu>
-          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-      ;
+    <div className="grid grid-rows-4 text-center items-center bg-yellow-500">
+      <Link className="p-4 font-mono hover:opacity-75" to="/">
+        Home
+      </Link>
+      <Link className="p-4 font-mono hover:opacity-75" to="/menu">
+        Menu
+      </Link>
+      <Link className="p-4 font-mono hover:opacity-75" to="/about">
+        About
+      </Link>
+      <Link className="p-4 font-mono hover:opacity-75" to="/contact">
+        Contact
+      </Link>
     </div>
   );
 };

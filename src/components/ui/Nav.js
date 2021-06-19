@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 
-const Nav = () => {
+const Nav = ({ toggle }) => {
   const [navbar, setNavbar] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +34,7 @@ const Nav = () => {
           stroke="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={toggle}
         >
           <path
             strokeLinecap="round"

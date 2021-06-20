@@ -189,8 +189,16 @@ const FormCustom = () => {
       <form>
         <div className="mt-5 ">
           <div className="flex justify-between items-center">
-            <select
+            {/* <select
               id="standard-basic"
+              label="Search"
+              onChange={(e) => setSearchTerm(e.target.value)}
+            /> */}
+            <input
+              type="text"
+              className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent rounded px-1 py-2 font-mono shadow-xl"
+              id="standard-basic"
+              placeholder="Search"
               label="Search"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -232,7 +240,7 @@ const FormCustom = () => {
                   value={covers}
                   onChange={(e) => setCovers(e.target.value)}
                   helperText=""
-                  className="font-mono p-2 bg-green-500 rounded hover:bg-green-700"
+                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
                 >
                   {coverOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -241,19 +249,25 @@ const FormCustom = () => {
                   ))}
                 </select>
               </div>
-              <select
-                id="material"
-                select
-                label="Material Construction"
-                value={material}
-                onChange={(e) => setMaterial(e.target.value)}
-              >
-                {materialOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+              <div className="flex flex-col">
+                <label for="covers" className="font-mono p-1">
+                  Material Construction:
+                </label>
+                <select
+                  id="material"
+                  select
+                  label="Material Construction"
+                  value={material}
+                  onChange={(e) => setMaterial(e.target.value)}
+                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                >
+                  {materialOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
               <select
                 id="driveType"
                 select

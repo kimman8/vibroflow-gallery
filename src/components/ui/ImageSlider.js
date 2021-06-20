@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-import ImageGallery from "./ImageGallery";
+import FormCustom from "./FormCustom";
 
 const ImageSlider = ({ unitProfile }) => {
   const [current, setCurrent] = useState(0);
@@ -30,14 +30,10 @@ const ImageSlider = ({ unitProfile }) => {
 
   return (
     <div>
-      <section className="slider">
+      <section className="flex justify-between items-center z-10">
         <FaArrowAltCircleLeft
           className="left-arrow hover:text-green-500 "
           onClick={prevSlide}
-        />
-        <FaArrowAltCircleRight
-          className="right-arrow hover:text-green-500"
-          onClick={nextSlide}
         />
         {unitProfile.profileImages.map((profileImage, index) => (
           <div
@@ -50,11 +46,15 @@ const ImageSlider = ({ unitProfile }) => {
                 alt=""
                 profileImage={profileImage}
                 key={index}
-                className="border-4 border-yellow-400  rounded-xl border-opacity-75 max-w-xs md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl max-h-32 hover:opacity-90"
+                className="border-4 border-yellow-400 rounded-xl border-opacity-75 max-w-xs md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl 2xl:max-h-96 max-h-32 hover:opacity-90"
               />
             )}
           </div>
         ))}
+        <FaArrowAltCircleRight
+          className="right-arrow hover:text-green-500"
+          onClick={nextSlide}
+        />
       </section>
       <div className="flex justify-center items-center mt-10">
         {unitProfile.profileImages.map((profileImage, index) => (
@@ -73,11 +73,14 @@ const ImageSlider = ({ unitProfile }) => {
               // onClick={(e) => console.log(e.target.src)}
               onClick={(e) => selector}
             />
+            <div>
+              <img src="" alt="" className="bg-red-500 container rounded" />
+            </div>
           </div>
         ))}
       </div>
+      <FormCustom />
     </div>
   );
 };
-
 export default ImageSlider;

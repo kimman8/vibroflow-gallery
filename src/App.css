@@ -25,19 +25,10 @@ header {
   padding-top: 144px;
 } */
 
-.slider {
-  position: relative;
-  z-index: 1;
-  /* height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .right-arrow {
-  position: fixed;
+  /* position: fixed; */
   top: 50%;
-  right: 520px;
+  /* right: 520px; */
   font-size: 3rem;
   color: #000;
   z-index: 10;
@@ -46,9 +37,9 @@ header {
 }
 
 .left-arrow {
-  position: fixed;
+  /* position: fixed; */
   top: 50%;
-  left: 520px;
+  /* left: 520px; */
   font-size: 3rem;
   color: #000;
   z-index: 10;

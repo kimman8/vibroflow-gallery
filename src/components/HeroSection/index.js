@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-// import Video from "../../UNIT-CAPTURES/J329-4.mp4";
-// import { Button } from "../ButtonElements";
 import {
   ArrowForward,
   ArrowRight,

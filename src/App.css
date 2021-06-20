@@ -48,7 +48,7 @@ header {
 }
 
 .slide {
-  opacity: 0;
+  opacity: 1;
   transition-duration: 1s ease;
 }
 .slideThumbnail {

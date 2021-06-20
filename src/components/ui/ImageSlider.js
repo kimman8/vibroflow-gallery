@@ -37,7 +37,7 @@ const ImageSlider = ({ unitProfile }) => {
         />
         {unitProfile.profileImages.map((profileImage, index) => (
           <div
-            className={index === current ? "slide active " : "slide"}
+            className={index === current ? "mx-auto slide active " : "slide"}
             key={index}
           >
             {index === current && (
@@ -46,7 +46,7 @@ const ImageSlider = ({ unitProfile }) => {
                 alt=""
                 profileImage={profileImage}
                 key={index}
-                className="border-4 border-yellow-400 rounded-xl border-opacity-75 max-w-xs md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl 2xl:max-h-96 max-h-32 hover:opacity-90"
+                className="border-4 border-yellow-400 rounded-xl border-opacity-75 max-w-xs md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl 2xl:max-h-96 max-h-32 hover:opacity-90  "
               />
             )}
           </div>

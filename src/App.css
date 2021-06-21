@@ -114,3 +114,22 @@ header {
   line-height: 40px;
   width: 0px;
 }
+
+label {
+  position: relative;
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  /* background: url('<svg class="w-6h-6" fill="currentColor" viewBox="002020" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M84a4401008440000-8zm28a6601110.893.476l4.8174.817a11001-1.4141.414l-4.816-4.816a6600128z" clip-rule="evenodd"></path></svg>')
+    center / contain no-repeat; */
+}
+
+input {
+  padding: 10px 30px;
+}

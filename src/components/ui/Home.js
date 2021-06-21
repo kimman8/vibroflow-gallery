@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import Form from "./Form";
+import FormCustom from "./FormCustom";
 
 const Home = () => {
   return (
     <Fragment>
-      <Form />
+      <FormCustom />
     </Fragment>
   );
 };

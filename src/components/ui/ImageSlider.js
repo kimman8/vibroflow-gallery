@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-import FormCustom from "./FormCustom";
 
 const ImageSlider = ({ unitProfile }) => {
   const [current, setCurrent] = useState(0);
@@ -79,7 +78,6 @@ const ImageSlider = ({ unitProfile }) => {
           </div>
         ))}
       </div>
-      <FormCustom />
     </div>
   );
 };

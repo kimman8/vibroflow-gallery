@@ -14,7 +14,7 @@ const CardImage = ({ unit }) => {
         <h1 className="text-base md:text-lg lg:text-xl font-bold">
           {unit.serial} - {unit.company}
         </h1>
-        <p className="capitalize font-thin text-sm text-black">
+        <p className="capitalize font-thin text-sm text-black italic">
           {unit.drive} {unit.type}
         </p>
       </div>

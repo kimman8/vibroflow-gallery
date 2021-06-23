@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import UnitGrid from "../units/UnitGrid";
-import SearchBar from "./SearchBar";
 
 const supportFrameOptions = [
   {
@@ -195,9 +194,12 @@ const FormCustom = () => {
               label="Search"
               onChange={(e) => setSearchTerm(e.target.value)}
             /> */}
-            <div className="max-w-xl ">
-              <div className="w-full flex items-center m-auto ">
-                <a href="" className="absolute  hover:text-purple-500">
+            <div>
+              <div className="max-w-full flex items-center m-auto ">
+                <a
+                  href=""
+                  className="absolute hover:text-blue-600 pl-2 cursor-default"
+                >
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -215,7 +217,7 @@ const FormCustom = () => {
                 </a>
                 <input
                   type="text"
-                  className="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent rounded px-2 py-2 font-mono shadow-xl  text-center"
+                  className="w-52 focus:outline-none focus:ring-2 focus:ring-blue-600 rounded font-mono shadow-2xl text-center focus:placeholder-blue-300 bg-gray-100"
                   id="standard-basic"
                   placeholder="Search.."
                   label="Search"
@@ -234,9 +236,9 @@ const FormCustom = () => {
             </button>
           </div>
           {showFilters && (
-            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-1 bg-opacity-30 bg-clip-border p-1 bg-indigo-200 border-4 border-indigo-300 rounded">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 bg-opacity-30 bg-clip-border p-1 bg-indigo-200 border-4 border-indigo-300 rounded">
               <div className="flex flex-col">
-                <label for="supportFrame" className="font-mono p-1">
+                <label for="supportFrame" className="font-mono p-1 underline">
                   Support Frame:
                 </label>
                 <select
@@ -247,7 +249,7 @@ const FormCustom = () => {
                   onChange={(e) => setSupportFrame(e.target.value)}
                   helperText=""
                   color="secondary"
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {supportFrameOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -258,7 +260,7 @@ const FormCustom = () => {
               </div>
 
               <div className="flex flex-col">
-                <label for="covers" className="font-mono p-1">
+                <label for="covers" className="font-mono p-1 underline">
                   Covers:
                 </label>
                 <select
@@ -268,7 +270,7 @@ const FormCustom = () => {
                   value={covers}
                   onChange={(e) => setCovers(e.target.value)}
                   helperText=""
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {coverOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -278,7 +280,7 @@ const FormCustom = () => {
                 </select>
               </div>
               <div className="flex flex-col">
-                <label for="covers" className="font-mono p-1">
+                <label for="covers" className="font-mono p-1 underline">
                   Material Construction:
                 </label>
                 <select
@@ -287,7 +289,7 @@ const FormCustom = () => {
                   label="Material Construction"
                   value={material}
                   onChange={(e) => setMaterial(e.target.value)}
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {materialOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -297,7 +299,7 @@ const FormCustom = () => {
                 </select>
               </div>
               <div className="flex flex-col">
-                <label for="driveType" className="font-mono p-1">
+                <label for="driveType" className="font-mono p-1 underline">
                   Drive Type:
                 </label>
                 <select
@@ -306,7 +308,7 @@ const FormCustom = () => {
                   label="Drive Type"
                   value={driveType}
                   onChange={(e) => setDriveType(e.target.value)}
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                   helperText=""
                 >
                   {driveTypeOptions.map((option) => (
@@ -317,7 +319,7 @@ const FormCustom = () => {
                 </select>
               </div>
               <div className="flex flex-col">
-                <label for="type" className="font-mono p-1">
+                <label for="type" className="font-mono p-1 underline">
                   Type:
                 </label>
                 <select
@@ -326,7 +328,7 @@ const FormCustom = () => {
                   label="Type"
                   value={type}
                   onChange={(e) => setType(e.target.value)}
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {typeOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -336,7 +338,7 @@ const FormCustom = () => {
                 </select>
               </div>
               <div className="flex flex-col">
-                <label for="screeningMedia" className="font-mono p-1">
+                <label for="screeningMedia" className="font-mono p-1 underline">
                   Screening Media:
                 </label>
                 <select
@@ -345,7 +347,7 @@ const FormCustom = () => {
                   label="Screening Media"
                   value={screeningMedia}
                   onChange={(e) => setScreeningMedia(e.target.value)}
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {screeningMediaOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -355,7 +357,7 @@ const FormCustom = () => {
                 </select>
               </div>
               <div className="flex flex-col">
-                <label for="liners" className="font-mono p-1">
+                <label for="liners" className="font-mono p-1 underline">
                   Liners:
                 </label>
                 <select
@@ -364,7 +366,7 @@ const FormCustom = () => {
                   label="Liners"
                   value={liners}
                   onChange={(e) => setLiners(e.target.value)}
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {linerOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -374,7 +376,7 @@ const FormCustom = () => {
                 </select>
               </div>
               <div className="flex flex-col">
-                <label for="supports" className="font-mono p-1">
+                <label for="supports" className="font-mono p-1 underline">
                   Supports:
                 </label>
                 <select
@@ -383,7 +385,7 @@ const FormCustom = () => {
                   label="Supports"
                   value={supports}
                   onChange={(e) => setSupports(e.target.value)}
-                  className="font-mono p-2 bg-green-400 rounded hover:bg-green-600"
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {supportOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -393,7 +395,7 @@ const FormCustom = () => {
                 </select>
               </div>
 
-              <button className="bg-red-500 hover:bg-red-600 ring ring-pink-600 ring-offset-2 mt-1 mb-2 ml-1 text-bold rounded text-white font-mono py-1 px-3">
+              <button className="bg-red-500 hover:bg-red-600 ring ring-pink-600 ring-offset-2  my-2 text-bold rounded text-white font-mono py-1 px-2">
                 Clear Filters
               </button>
             </div>

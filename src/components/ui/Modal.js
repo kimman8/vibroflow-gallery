@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 
 const Background = styled.div`
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
@@ -13,8 +13,7 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-
+  z-index: 20;
 `;
 
 const ModalWrapper = styled.div`
@@ -36,9 +35,7 @@ const ModalImg = styled.img`
   border-radius: 5px;
   background: #000;
   border: 5px solid green;
-  
 `;
-
 
 // const ModalContent = styled.div`
 //   display: flex;
@@ -66,10 +63,10 @@ const CloseModalButton = styled(MdClose)`
   top: 20px;
   left: 20px;
   width: 32px;
-  height:32px;
+  height: 32px;
   padding: 0;
   color: red;
-  z-index: 10; 
+  z-index: 10;
 `;
 
 export const Modal = ({ showModal, setShowModal }) => {

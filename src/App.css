@@ -62,9 +62,9 @@ header {
   transform: scale(1.08);
 }
 .slideThumbnail.active {
-  border: tomato solid 2px;
+  /* border: tomato solid 2px; */
   padding: 2px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   opacity: 1;
 }
 

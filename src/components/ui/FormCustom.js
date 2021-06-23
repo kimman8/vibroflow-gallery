@@ -394,8 +394,7 @@ const FormCustom = () => {
                   ))}
                 </select>
               </div>
-
-              <button className="bg-red-500 hover:bg-red-600 ring ring-pink-600 ring-offset-2  my-2 text-bold rounded text-white font-mono py-1 px-2">
+              <button className="bg-red-500 hover:bg-red-600 ring ring-pink-600 ring-offset-2  text-bold rounded text-white font-mono p-2 m-1">
                 Clear Filters
               </button>
             </div>

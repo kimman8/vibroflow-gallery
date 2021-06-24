@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "es6-promise": "^4.2.8",
+    "framer-motion": "^4.1.17",
     "isomorphic-fetch": "^3.0.0",
     "json-server": "^0.16.3",
     "postcss": "^8.3.0",

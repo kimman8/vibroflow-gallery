@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import * as FaIcons from "react-icons/fa";
 
 const Nav = ({ toggle }) => {
   const [navbar, setNavbar] = useState(false);
@@ -35,8 +36,8 @@ const Nav = ({ toggle }) => {
 
   return (
     <nav
-      className={`flex justify-between items-center h-16 bg-gray-800 text-white relative  font-mono transition duration-500 ease-in-out sticky top-0 z-10
-      //  ${navbar && `sticky top-0 z-10 `}`}
+      className={`flex justify-between items-center h-16 bg-gray-800 text-white relative  font-bold font-mono transition duration-500 ease-in-out sticky top-0 z-10
+        ${navbar && `sticky top-0 z-10 `}`}
       style={background}
       role="navigation"
     >

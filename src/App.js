@@ -17,6 +17,7 @@ import Conveyors from "./components/ui/Conveyors";
 import Screens from "./components/ui/Screens";
 import { AnimatePresence } from "framer-motion";
 import { GlobalStyle } from "./components/ui/globalStyles";
+import Sidebar from "./components/ui/Sidebar";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +41,7 @@ const App = () => {
     <React.Fragment>
       <GlobalStyle />
       <Nav toggle={toggle} />
+      <Sidebar />
       <AnimatePresence exitBeforeEnter>
         {isOpen && <Dropdown />}
         <Switch location={location} key={location.pathname}>

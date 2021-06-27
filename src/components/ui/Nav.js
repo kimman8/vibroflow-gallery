@@ -8,20 +8,36 @@ const Nav = ({ toggle }) => {
     const handleScroll = () => {
       if (window.scrollY > 0.1) {
         setNavbar(true);
-        // document.body.classList.add("bodyPaddingTop");
       } else {
-        // document.body.classList.remove("bodyPaddingTop");
         setNavbar(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
   }, []);
+  const [currentLink, setCurrentLink] = useState("");
+  let background = {};
+  switch (currentLink) {
+    case "home":
+      background = { backgroundColor: "rgba(31, 41, 55,1)" };
+      break;
+    case "screens":
+      background = { backgroundColor: "transparent" };
+      break;
+    case "feeders":
+      background = { backgroundColor: "transparent" };
+      break;
+    case "conveyors":
+      background = { backgroundColor: "transparent" };
+      break;
+    default:
+      background = {};
+  }
 
   return (
     <nav
-      className={`flex justify-between items-center h-16 bg-gray-800 text-white relative shadow-sm font-mono transition duration-500 ease-in-out ${
-        navbar && `sticky top-0 z-10 shadow-lg`
-      }`}
+      className={`flex justify-between items-center h-16 bg-gray-800 text-white relative  font-mono transition duration-500 ease-in-out sticky top-0 z-10
+      //  ${navbar && `sticky top-0 z-10 `}`}
+      style={background}
       role="navigation"
     >
       <Link to="/" className="pl-1">
@@ -45,17 +61,33 @@ const Nav = ({ toggle }) => {
         </svg>
       </div>
       <div className="pr-8 md:block hidden ">
-        <Link className="p-4 font-mono hover:opacity-75" to="/">
+        <Link
+          className="p-4 font-mono hover:opacity-75"
+          onClick={() => setCurrentLink("home")}
+          to="/"
+        >
           Home
         </Link>
-        <Link className="p-4 font-mono hover:opacity-75" to="/menu">
-          Menu
+        <Link
+          className="p-4 font-mono hover:opacity-75"
+          onClick={() => setCurrentLink("screens")}
+          to="/screens"
+        >
+          Screens
         </Link>
-        <Link className="p-4 font-mono hover:opacity-75" to="/about">
-          About
+        <Link
+          className="p-4 font-mono hover:opacity-75"
+          onClick={() => setCurrentLink("feeders")}
+          to="/feeders"
+        >
+          Feeders
         </Link>
-        <Link className="p-4 font-mono hover:opacity-75" to="/contact">
-          Contact
+        <Link
+          className="p-4 font-mono hover:opacity-75"
+          to="/conveyors"
+          onClick={() => setCurrentLink("conveyors")}
+        >
+          Conveyors
         </Link>
       </div>
     </nav>

@@ -1,28 +1,51 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-const Hero = () => {
+const Section = styled.section`
+  background: url(${({ image }) => image && image}) center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: -96px;
+`;
+const Container = styled.div`
+  color: #fff;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 2rem;
+  border-radius: 10px;
+  h1 {
+    font-size: clamp(2rem, 8vw, 5rem);
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: clamp(1rem, 6vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+  button {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    padding: 0.8rem 2rem;
+    color: #000;
+    background: #ffb347;
+    background: linear-gradient(to right, #ffcc33, #ffb347);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+  }
+`;
+
+const Hero = ({ image, title, description }) => {
   return (
-    <div className="bg-white h-screen flex flex-col justify-center items-center">
-      <h1 className="lg:text-9xl md:text-7xl sm:text-5xl text-3xl font-black mb-14">
-        Vibroflow
-      </h1>
-      <Link className="py-6 px-10 bg-yellow-500 rounded-full text-3xl hover:bg-yellow-300 transition duration-300 ease-in-out flex items-center animate-bounce">
-        Explore
-        <svg
-          className="w-6 h-6 ml-4"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </Link>
-    </div>
+    <Section image={image}>
+      <Container>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <button>Learn More</button>
+      </Container>
+    </Section>
   );
 };
 

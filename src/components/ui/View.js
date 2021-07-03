@@ -4,7 +4,7 @@ const View = ({ onView }) => {
   return (
     <div>
       <svg
-        className="w-8 h-8 cursor-pointer mb-3 hover:text-green-500"
+        className="w-8 h-8 cursor-pointer mb-3 hover:text-blue-500"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"

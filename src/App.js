@@ -18,6 +18,7 @@ import Screens from "./components/ui/Screens";
 import { AnimatePresence } from "framer-motion";
 import { GlobalStyle } from "./components/ui/globalStyles";
 import Sidebar from "./components/ui/Sidebar";
+import FeedersDD from "./components/ui/FeedersDD";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,13 +42,14 @@ const App = () => {
     <React.Fragment>
       <GlobalStyle />
       <Nav toggle={toggle} />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <AnimatePresence exitBeforeEnter>
         {isOpen && <Dropdown />}
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact component={Home} />
           <Route path="/screens" component={Screens} />
           <Route path="/feeders" component={Feeders} />
+          <Route path="/feedersDD" component={FeedersDD} />
           <Route path="/conveyors" component={Conveyors} />
           <Route path="/unit-:serial" component={Unit} />
         </Switch>

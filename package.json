@@ -34,7 +34,7 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
+    "start": "npm run server &&npm run watch:css && react-scripts start",
     "build": "npm run watch:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

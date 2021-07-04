@@ -42,7 +42,7 @@ const App = () => {
     <React.Fragment>
       <GlobalStyle />
       <Nav toggle={toggle} />
-      {/* <Sidebar /> */}
+      <Sidebar />
       <AnimatePresence exitBeforeEnter>
         {isOpen && <Dropdown />}
         <Switch location={location} key={location.pathname}>

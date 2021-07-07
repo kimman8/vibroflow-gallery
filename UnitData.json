@@ -1,6 +1,52 @@
 {
   "units": [
     {
+      "serial": "J224",
+      "company": "SITA",
+      "drive": "sub resonant",
+      "type": "screen",
+      "width": "600",
+      "length": "2500",
+      "image": "https://i.imgur.com/PzYF650h.jpg",
+      "profileImages": [
+        "https://i.imgur.com/PzYF650h.jpg",
+        "https://i.imgur.com/PzYF650h.jpg",
+        "https://i.imgur.com/PzYF650h.jpg"
+
+      ],
+      "GAD": "https://i.imgur.com/FxyFgma.png",
+      "commissioningData": "https://i.imgur.com/FxyFgma.png",
+      "supportFrame": "without",
+      "covers": "without",
+      "screeningMedia": "mesh",
+      "liners": "none",
+      "supports": "steel coils",
+      "materialConstruction": "MS G250"
+    },
+    {
+      "serial": "J225",
+      "company": "Debco",
+      "drive": "sub resonant",
+      "type": "screen",
+      "width": "600",
+      "length": "2500",
+      "image": "https://i.imgur.com/PzYF650h.jpg",
+      "profileImages": [
+        "https://i.imgur.com/PzYF650h.jpg",
+        "https://i.imgur.com/PzYF650h.jpg",
+        "https://i.imgur.com/PzYF650h.jpg"
+
+      ],
+      "GAD": "https://i.imgur.com/FxyFgma.png",
+      "commissioningData": "https://i.imgur.com/FxyFgma.png",
+      "supportFrame": "without",
+      "covers": "without",
+      "screeningMedia": "mesh",
+      "liners": "none",
+      "supports": "steel coils",
+      "materialConstruction": "MS G250"
+    },
+    {
       "serial": "J226",
       "company": "Biocoal Holdings",
       "drive": "sub resonant",

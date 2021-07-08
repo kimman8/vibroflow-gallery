@@ -44,7 +44,7 @@
     "eject": "react-scripts eject",
     "server": "json-server --watch UnitData.json --port 5000",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run server\""
+    "dev": "npm run start & npm run server"
   },
   "eslintConfig": {
     "extends": [

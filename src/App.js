@@ -41,13 +41,14 @@ const App = () => {
     <React.Fragment>
       <GlobalStyle />
       <Nav toggle={toggle} />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <AnimatePresence exitBeforeEnter>
         {isOpen && <Dropdown />}
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact component={Home} />
           <Route path="/screens" component={Screens} />
           <Route path="/feeders" component={Feeders} />
+          {/* <Route path="/feedersDD" component={FeedersDD} /> */}
           <Route path="/conveyors" component={Conveyors} />
           <Route path="/unit-:serial" component={Unit} />
         </Switch>

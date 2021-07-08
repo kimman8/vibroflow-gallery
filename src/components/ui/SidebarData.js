@@ -1,15 +1,14 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
+import * as RiIcons from "react-icons/ri";
+import * as AiIcons from "react-icons/ai";
 import * as GiIcons from "react-icons/gi";
-import * as RiIcons from "react-icons/ri";
-import * as IoIcons from "react-icons/io";
-import * as RiIcons from "react-icons/ri";
 
 export const SidebarData = [
   {
     title: "Screens",
     path: "/screens",
-    icon: <GiFoundryBucket />,
+    icon: <FaIcons.FaArtstation />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpen: <RiIcons.RiArrowUpSFill />,
     subNav: [
@@ -44,5 +43,57 @@ export const SidebarData = [
         icon: <FaIcons.FaRecycle />,
       },
     ],
+  },
+  {
+    title: "Feeders",
+    path: "/feeders",
+    icon: <AiIcons.AiFillBulb />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpen: <RiIcons.RiArrowUpSFill />,
+    subNav: [
+      {
+        title: "Direct Drive",
+        path: "/feedersDD",
+        icon: <FaIcons.FaShippingFast />,
+      },
+      {
+        title: "Sub Resonant",
+        path: "/feeders/subresonant",
+        icon: <FaIcons.FaCarAlt />,
+      },
+    ],
+  },
+  {
+    title: "Conveyors",
+    path: "/conveyors",
+    icon: <FaIcons.FaArtstation />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpen: <RiIcons.RiArrowUpSFill />,
+    subNav: [
+      {
+        title: "Direct Drive",
+        path: "/conveyors/directdrive",
+        icon: <RiIcons.RiCaravanLine />,
+      },
+      {
+        title: "Sub Resonant",
+        path: "/conveyors/subresonant",
+        icon: <RiIcons.RiCaravanLine />,
+      },
+    ],
+  },
+  {
+    title: "Spiral",
+    path: "/spiral",
+    icon: <GiIcons.GiDividedSpiral />,
+    // iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpen: <RiIcons.RiArrowUpSFill />,
+  },
+  {
+    title: "Cooler",
+    path: "/cooler",
+    icon: <RiIcons.RiTempColdLine />,
+    // iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpen: <RiIcons.RiArrowUpSFill />,
   },
 ];

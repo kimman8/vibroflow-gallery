@@ -3,18 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "all": "^0.0.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
     "framer-motion": "^4.1.17",
     "isomorphic-fetch": "^3.0.0",
+    "jquery": "^1.9.1",
     "json-server": "^0.16.3",
-    "postcss": "^8.3.0",
+    "moment": "^2.29.1",
+    "npm-run": "^5.0.1",
+    "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.5",
     "react": "^17.0.2",
@@ -22,18 +29,22 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^1.1.5",
-    "react-spring": "^9.0.0-rc.3",
+    "react-scripts": "2.x.x",
+    "react-spring": "^9.2.3",
+    "save-dev": "^0.0.1-security",
     "styled-components": "^5.3.0",
-    "web-vitals": "^1.1.1"
+    "uuid": "^3.4.0",
+    "web-vitals": "^1.1.1",
+    "yarn": "^1.22.10"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
-    "build": "npm run watch:css && react-scripts build",
+    "start": "npm run watch:css && react-scripts start ",
+    "build": "npm run watch:css && react-scripts build && npm run server",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --watch UnitData.json --port 5000",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run server\""
   },
   "eslintConfig": {
     "extends": [
@@ -44,7 +55,6 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
       "not op_mini all"
     ],
     "development": [
@@ -54,10 +64,27 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "@testing-library/dom": "^7.31.2",
+    "autoprefixer": "^10.2.6",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^6.2.0",
     "file-loader": "^1.1.5",
+    "nodemon": "^2.0.9",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.1.4",
+    "tailwindcss": "^2.2.4",
     "url-loader": "^0.6.2"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimman8/vibroflow-gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimman8/vibroflow-gallery/issues"
+  },
+  "homepage": "https://github.com/kimman8/vibroflow-gallery#readme"
 }

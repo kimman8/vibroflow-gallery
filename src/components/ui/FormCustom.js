@@ -218,7 +218,7 @@ const FormCustom = () => {
                 </a>
                 <input
                   type="text"
-                  className="w-52 focus:outline-none focus:ring-2 focus:ring-blue-600 hover:ring-2 hover:bg-blue-100 rounded-full border-2 border-gray-400 font-mono shadow-2xl text-center focus:placeholder-blue-300 bg-gray-100"
+                  className="w-52 focus:outline-none rounded-full hover:bg-blue-100 border-2 border-gray-200 focus:ring-2 focus:ring-blue-600 font-mono shadow-2xl text-center focus:placeholder-blue-300"
                   id="standard-basic"
                   placeholder="Search.."
                   label="Search"
@@ -400,7 +400,7 @@ const FormCustom = () => {
               </button>
             </div>
           )}
-          <UnitServerless
+          <UnitGrid
             searchTerm={searchTerm}
             supportFrame={supportFrame}
             driveType={driveType}

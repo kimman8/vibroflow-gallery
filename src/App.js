@@ -18,8 +18,7 @@ import Screens from "./components/ui/Screens";
 import { AnimatePresence } from "framer-motion";
 import { GlobalStyle } from "./components/ui/globalStyles";
 import Sidebar from "./components/ui/Sidebar";
-import FeedersDD from "./components/ui/FeedersDD";
-
+import {motion} from 'framer-motion'
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -49,7 +48,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/screens" component={Screens} />
           <Route path="/feeders" component={Feeders} />
-          <Route path="/feedersDD" component={FeedersDD} />
+          {/* <Route path="/feedersDD" component={FeedersDD} /> */}
           <Route path="/conveyors" component={Conveyors} />
           <Route path="/unit-:serial" component={Unit} />
         </Switch>

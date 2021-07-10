@@ -24,8 +24,8 @@ const Unit = ({ match, unit }) => {
   return (
     <Fragment>
       {unitProfile && (
-        <div className="2xl:container mx-auto px-1">
-          <div className="flex justify-between items-center my-5">
+        <div className="2xl:container mx-auto px-1 md:px-5">
+          <div className="flex flex-col md:flex-row md:justify-between items-center my-5">
             <h1 className="text-xl md:text-4xl lg:text-5xl font-mono underline uppercase lg:italic lg:tracking-wider  ">
               {match.params.serial}-{unitProfile.company}
             </h1>

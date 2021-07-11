@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardImage from "../ui/CardImage";
 import Descending from "../ui/Descending";
-// import Spinner from "../ui/Spinner";
+import Spinner from "../ui/Spinner";
 import View from "../ui/View";
 
 const UnitGrid = ({
@@ -99,10 +99,10 @@ const UnitGrid = ({
     <section>
       {isLoading ? (
         <div className="flex flex-col justify-center">
-          <h1 className="text-xl md: text-3xl lg:text-5xl xl:text-7xl text-center mt-32 font-mono">
+          <h1 className="text-xl md:text-2xl lg:text-4xl xl:text-6xl text-center mt-32 font-mono">
             Loading..
           </h1>
-          {/* <Spinner /> */}
+          <Spinner />
         </div>
       ) : (
         <div>

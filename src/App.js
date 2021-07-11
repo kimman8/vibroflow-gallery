@@ -3,22 +3,12 @@ import "./index.css";
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import Unit from "./components/units/Unit";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Switch, Route, useLocation } from "react-router-dom";
 import Home from "./components/ui/Home";
-import Feeders from "./components/ui/Feeders";
 import Nav from "./components/ui/Nav";
 import Dropdown from "./components/ui/Dropdown";
-import Conveyors from "./components/ui/Conveyors";
-import Screens from "./components/ui/Screens";
 import { AnimatePresence } from "framer-motion";
 import { GlobalStyle } from "./components/ui/globalStyles";
-import Sidebar from "./components/ui/Sidebar";
-
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {

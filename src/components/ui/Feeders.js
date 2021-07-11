@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Hero from "./Hero";
-import Image from "../../images/J237-2.JPG";
+// import Image from "../../images/J237-2.JPG";
 import { motion } from "framer-motion";
 import { animationTwo, transition } from "../../animations";
 

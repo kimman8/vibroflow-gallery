@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UnitGrid from "../units/UnitGrid";
+import UnitTest from "../units/UnitTest";
 
 const supportFrameOptions = [
   {
@@ -236,7 +236,7 @@ const FormCustom = () => {
             </button>
           </div>
           {showFilters && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 bg-opacity-30 bg-clip-border p-1 bg-indigo-200 border-4 border-indigo-300 rounded">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 bg-opacity-30 bg-clip-border p-1  bg-gray-400 border-4  rounded">
               <div className="flex flex-col">
                 <label for="supportFrame" className="font-mono p-1 underline">
                   Support Frame:
@@ -249,7 +249,7 @@ const FormCustom = () => {
                   onChange={(e) => setSupportFrame(e.target.value)}
                   helperText=""
                   color="secondary"
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                 >
                   {supportFrameOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -270,7 +270,7 @@ const FormCustom = () => {
                   value={covers}
                   onChange={(e) => setCovers(e.target.value)}
                   helperText=""
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                 >
                   {coverOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -289,7 +289,7 @@ const FormCustom = () => {
                   label="Material Construction"
                   value={material}
                   onChange={(e) => setMaterial(e.target.value)}
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                 >
                   {materialOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -308,7 +308,7 @@ const FormCustom = () => {
                   label="Drive Type"
                   value={driveType}
                   onChange={(e) => setDriveType(e.target.value)}
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                   helperText=""
                 >
                   {driveTypeOptions.map((option) => (
@@ -328,7 +328,7 @@ const FormCustom = () => {
                   label="Type"
                   value={type}
                   onChange={(e) => setType(e.target.value)}
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                 >
                   {typeOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -347,7 +347,7 @@ const FormCustom = () => {
                   label="Screening Media"
                   value={screeningMedia}
                   onChange={(e) => setScreeningMedia(e.target.value)}
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                 >
                   {screeningMediaOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -366,7 +366,7 @@ const FormCustom = () => {
                   label="Liners"
                   value={liners}
                   onChange={(e) => setLiners(e.target.value)}
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                 >
                   {linerOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -385,7 +385,7 @@ const FormCustom = () => {
                   label="Supports"
                   value={supports}
                   onChange={(e) => setSupports(e.target.value)}
-                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
+                  className="font-mono p-2 rounded italic border-2"
                 >
                   {supportOptions.map((option) => (
                     <option key={option.value} value={option.value}>

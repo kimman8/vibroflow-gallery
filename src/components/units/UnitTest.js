@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CardImage from "../ui/CardImage";
 import Descending from "../ui/Descending";
 import Units from "./UnitD";
@@ -14,7 +14,7 @@ const UnitTest = ({
   material,
   screeningMedia,
 }) => {
-  const [parsedUnits, setParsedUnits] = useState([]);
+  // const [parsedUnits, setParsedUnits] = useState([]);
   const [reverse, setReverse] = useState(true);
 
   const onReverse = (e) => {

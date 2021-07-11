@@ -28,8 +28,12 @@ const ImageSlider = ({ unitProfile }) => {
   }
 
   return (
-    <div className="max-h-full">
-      <section className="flex flex-col items-center content-evenly z-10">
+    <div>
+      <section className="flex justify-between items-center z-10">
+        <FaArrowAltCircleLeft
+          className="left-arrow hover:text-green-500 "
+          onClick={prevSlide}
+        />
         {unitProfile.profileImages.map((profileImage, index) => (
           <div
             className={index === current ? "mx-auto slide active " : "slide"}
@@ -41,21 +45,15 @@ const ImageSlider = ({ unitProfile }) => {
                 alt=""
                 profileImage={profileImage}
                 key={index}
-                className="border-4 border-yellow-400 rounded-xl border-opacity-75 max-w-sm md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl 2xl:max-h-96 max-h-32 hover:opacity-90"
+                className="border-4 border-yellow-400 rounded-xl border-opacity-75 max-w-xs md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl 2xl:max-h-96 max-h-32 hover:opacity-90  "
               />
             )}
           </div>
         ))}
-        <div className="flex justify-between">
-          <FaArrowAltCircleLeft
-            className="left-arrow hover:text-green-500 text-2xl"
-            onClick={prevSlide}
-          />
-          <FaArrowAltCircleRight
-            className="right-arrow hover:text-green-500 text-2xl"
-            onClick={nextSlide}
-          />
-        </div>
+        <FaArrowAltCircleRight
+          className="right-arrow hover:text-green-500"
+          onClick={nextSlide}
+        />
       </section>
       <div className="flex justify-center items-center mt-10">
         {unitProfile.profileImages.map((profileImage, index) => (

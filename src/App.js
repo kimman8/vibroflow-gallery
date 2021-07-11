@@ -18,7 +18,7 @@ import Screens from "./components/ui/Screens";
 import { AnimatePresence } from "framer-motion";
 import { GlobalStyle } from "./components/ui/globalStyles";
 import Sidebar from "./components/ui/Sidebar";
-import { motion } from "framer-motion";
+
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {

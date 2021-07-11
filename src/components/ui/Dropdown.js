@@ -7,14 +7,14 @@ const Dropdown = () => {
       <Link className="p-4 font-mono hover:opacity-75" to="/">
         Home
       </Link>
-      <Link className="p-4 font-mono hover:opacity-75" to="/screens">
-        Screens
+      <Link className="p-4 font-mono hover:opacity-75" to="/menu">
+        Menu
       </Link>
-      <Link className="p-4 font-mono hover:opacity-75" to="/feeders">
-        Feeders
+      <Link className="p-4 font-mono hover:opacity-75" to="/about">
+        About
       </Link>
-      <Link className="p-4 font-mono hover:opacity-75" to="/conveyors">
-        Conveyors
+      <Link className="p-4 font-mono hover:opacity-75" to="/contact">
+        Contact
       </Link>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UnitTest from "../units/UnitTest";
+import UnitGrid from "../units/UnitGrid";
 
 const supportFrameOptions = [
   {
@@ -194,7 +194,7 @@ const FormCustom = () => {
               label="Search"
               onChange={(e) => setSearchTerm(e.target.value)}
             /> */}
-            <div className="m-auto flex flex-col">
+            <div>
               <div className="max-w-full flex items-center m-auto ">
                 <a
                   href=""
@@ -224,19 +224,19 @@ const FormCustom = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
-              <button
-                className="bg-green-500 hover:bg-green-600 ring ring-green-700 ring-offset-2 mt-1 mb-5 ml-1 text-bold rounded text-white font-mono py-2 px-4 mt-2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setShowFilters(!showFilters);
-                }}
-              >
-                {showFilters ? "Hide Filters ▲" : "Add Filters ▼"}
-              </button>
             </div>
+            <button
+              className="bg-green-500 hover:bg-green-600 ring ring-green-700 ring-offset-2 mt-1 mb-5 ml-1 text-bold rounded text-white font-mono py-2 px-4"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowFilters(!showFilters);
+              }}
+            >
+              {showFilters ? "Hide Filters ▲" : "Add Filters ▼"}
+            </button>
           </div>
           {showFilters && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 bg-opacity-30 bg-clip-border p-1 bg-gray-400 rounded">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 bg-opacity-30 bg-clip-border p-1 bg-indigo-200 border-4 border-indigo-300 rounded">
               <div className="flex flex-col">
                 <label for="supportFrame" className="font-mono p-1 underline">
                   Support Frame:
@@ -249,7 +249,7 @@ const FormCustom = () => {
                   onChange={(e) => setSupportFrame(e.target.value)}
                   helperText=""
                   color="secondary"
-                  className="font-mono p-2 rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {supportFrameOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -270,7 +270,7 @@ const FormCustom = () => {
                   value={covers}
                   onChange={(e) => setCovers(e.target.value)}
                   helperText=""
-                  className="font-mono p-2  rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {coverOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -289,7 +289,7 @@ const FormCustom = () => {
                   label="Material Construction"
                   value={material}
                   onChange={(e) => setMaterial(e.target.value)}
-                  className="font-mono p-2 rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {materialOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -308,7 +308,7 @@ const FormCustom = () => {
                   label="Drive Type"
                   value={driveType}
                   onChange={(e) => setDriveType(e.target.value)}
-                  className="font-mono p-2 rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                   helperText=""
                 >
                   {driveTypeOptions.map((option) => (
@@ -328,7 +328,7 @@ const FormCustom = () => {
                   label="Type"
                   value={type}
                   onChange={(e) => setType(e.target.value)}
-                  className="font-mono p-2 rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {typeOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -347,7 +347,7 @@ const FormCustom = () => {
                   label="Screening Media"
                   value={screeningMedia}
                   onChange={(e) => setScreeningMedia(e.target.value)}
-                  className="font-mono p-2 rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {screeningMediaOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -366,7 +366,7 @@ const FormCustom = () => {
                   label="Liners"
                   value={liners}
                   onChange={(e) => setLiners(e.target.value)}
-                  className="font-mono p-2 rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {linerOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -385,7 +385,7 @@ const FormCustom = () => {
                   label="Supports"
                   value={supports}
                   onChange={(e) => setSupports(e.target.value)}
-                  className="font-mono p-2 rounded  italic border-2 "
+                  className="font-mono p-2 bg-green-300 rounded hover:bg-green-400 italic border-2 border-green-600"
                 >
                   {supportOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -399,7 +399,6 @@ const FormCustom = () => {
               </button>
             </div>
           )}
-
           <UnitTest
             searchTerm={searchTerm}
             supportFrame={supportFrame}

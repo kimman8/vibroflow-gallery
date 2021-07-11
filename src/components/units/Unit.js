@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import GadModal from "../ui/GadModal";
-import ImageGallery from "../ui/ImageGallery";
+// import ImageGallery from "../ui/ImageGallery";
 import ImageSlider from "../ui/ImageSlider";
 import Units from "./UnitD";
 

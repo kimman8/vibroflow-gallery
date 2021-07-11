@@ -10,6 +10,7 @@ const CardImage = ({ unit }) => {
           unit={unit}
           key={unit.serial}
           className="hover:opacity-90 border-b-2 border-gray-700"
+          alt="unit image"
         />
         <h3 className="text-base md:text-lg lg:text-xl ">
           {unit.serial} - {unit.company}

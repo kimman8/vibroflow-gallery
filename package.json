@@ -75,7 +75,7 @@
   "main": "postcss.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kimman8/vibroflow-gallery.git"
+    "url": "https://github.com/kimman8/vibroflow-gallery.git"
   },
   "keywords": [],
   "author": "",

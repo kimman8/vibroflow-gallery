@@ -1,33 +1,13 @@
 import React, { Fragment, useState, useEffect } from "react";
 import GadModal from "../ui/GadModal";
-import ImageGallery from "../ui/ImageGallery";
 import ImageSlider from "../ui/ImageSlider";
 import Units from "./UnitD";
 
 const Unit = ({ match, unit }) => {
   const [unitProfile, setUnitProfile] = useState(null);
-  useEffect(() => {
-    setUnitProfile(
-      Units.units.find((unit) => unit.serial === match.params.serial)
-    );
-  });
-  // useEffect(() => {
-  //   const getUnits = async () => {
-  //     const unitsFromServer = await fetchUnits();
-  // setUnitProfile(
-  //   unitsFromServer.find((unit) => unit.serial === match.params.serial)
-  // );
-  //   };
-  //   getUnits();
-  // }, []);
-
-  // const fetchUnits = async () => {
-  //   const res = await fetch("http://localhost:5000/units");
-  //   const data = await res.json();
-
-  //   return data;
-  // };
-
+  setUnitProfile(
+    Units.units.find((unit) => unit.serial === match.params.serial)
+  );
   return (
     <Fragment>
       {unitProfile && (

@@ -226,7 +226,7 @@ const FormCustom = () => {
               </div>
             </div>
             <button
-              className="bg-green-500 hover:bg-green-600 ring ring-green-700 ring-offset-2 mt-1 mb-5 ml-1 text-bold rounded text-white font-mono py-2 px-4"
+              className="bg-green-400 hover:bg-green-500 ring ring-green-700 ring-offset-2 mt-1 mb-5 ml-1 text-bold rounded text-white font-mono py-2 px-4"
               onClick={(e) => {
                 e.preventDefault();
                 setShowFilters(!showFilters);

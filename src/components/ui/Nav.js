@@ -15,30 +15,30 @@ const Nav = ({ toggle }) => {
     window.addEventListener("scroll", handleScroll);
   }, []);
   const [currentLink, setCurrentLink] = useState("");
-  let background = {};
-  switch (currentLink) {
-    case "home":
-      background = { backgroundColor: "rgba(31, 41, 55,1)" };
-      break;
-    case "screens":
-      background = { backgroundColor: "transparent" };
-      break;
-    case "feeders":
-      background = { backgroundColor: "transparent" };
-      break;
-    case "conveyors":
-      background = { backgroundColor: "transparent" };
-      break;
-    default:
-      background = {};
-  }
+  // let background = {};
+  // switch (currentLink) {
+  //   case "home":
+  //     background = { backgroundColor: "rgba(31, 41, 55,1)" };
+  //     break;
+  // case "screens":
+  //   background = { backgroundColor: "transparent" };
+  //   break;
+  // case "feeders":
+  //   background = { backgroundColor: "transparent" };
+  //   break;
+  // case "conveyors":
+  //   background = { backgroundColor: "transparent" };
+  //   break;
+  //   default:
+  //     background = {};
+  // }
 
   return (
     <nav
       className={`flex justify-between items-center h-16 bg-gray-800 text-white relative  font-bold font-mono transition duration-500 ease-in-out sticky top-0 z-10
         ${navbar && `sticky top-0 z-10 `}`}
-      style={background}
-      role="navigation"
+      // style={background}
+      // role="navigation"
     >
       <Link to="/" className="pl-1">
         <Header />
@@ -60,15 +60,15 @@ const Nav = ({ toggle }) => {
           />
         </svg>
       </div>
-      <div className="pr-8 md:block hidden ">
-        <Link
-          className="p-4 font-mono hover:opacity-75"
-          onClick={() => setCurrentLink("home")}
-          to="/"
-        >
-          Home
-        </Link>
-        <Link
+      {/* <div className="pr-8 md:block hidden "> */}
+      <Link
+        className="p-4 font-mono hover:opacity-75"
+        onClick={() => setCurrentLink("home")}
+        to="/"
+      >
+        Home
+      </Link>
+      {/* <Link
           className="p-4 font-mono hover:opacity-75"
           onClick={() => setCurrentLink("screens")}
           to="/screens"
@@ -88,8 +88,8 @@ const Nav = ({ toggle }) => {
           onClick={() => setCurrentLink("conveyors")}
         >
           Conveyors
-        </Link>
-      </div>
+        </Link> */}
+      {/* </div> */}
     </nav>
   );
 };

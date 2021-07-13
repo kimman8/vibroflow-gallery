@@ -27,6 +27,7 @@ const App = () => {
     };
   });
   let location = useLocation();
+
   return (
     <React.Fragment>
       <GlobalStyle />
@@ -35,10 +36,7 @@ const App = () => {
       <AnimatePresence exitBeforeEnter>
         {isOpen && <Dropdown />}
         <Switch location={location} key={location.pathname}>
-          <Route path="/" exact component={Home} />
-          {/* <Route path="/screens" component={Screens} />
-          <Route path="/feeders" component={Feeders} />
-          <Route path="/conveyors" component={Conveyors} /> */}
+          <Route exact path="/" component={Home} />
           <Route path="/unit-:serial" component={Unit} />
         </Switch>
       </AnimatePresence>

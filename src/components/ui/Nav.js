@@ -14,7 +14,7 @@ const Nav = ({ toggle }) => {
     };
     window.addEventListener("scroll", handleScroll);
   }, []);
-  const [currentLink, setCurrentLink] = useState("");
+  // const [currentLink, setCurrentLink] = u  seState("");
   // let background = {};
   // switch (currentLink) {
   //   case "home":
@@ -43,6 +43,7 @@ const Nav = ({ toggle }) => {
       <Link to="/" className="pl-1">
         <Header />
       </Link>
+
       <div className="px-4 cursor-pointer md:hidden hover:opacity-75">
         <svg
           className="w-6 h-6"
@@ -61,13 +62,13 @@ const Nav = ({ toggle }) => {
         </svg>
       </div>
       {/* <div className="pr-8 md:block hidden "> */}
-      <Link
+      {/* <Link
         className="p-4 font-mono hover:opacity-75"
         onClick={() => setCurrentLink("home")}
         to="/"
       >
         Home
-      </Link>
+      </Link> */}
       {/* <Link
           className="p-4 font-mono hover:opacity-75"
           onClick={() => setCurrentLink("screens")}

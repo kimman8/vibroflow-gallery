@@ -41,23 +41,23 @@ const ImageSlider = ({ unitProfile }) => {
                 alt=""
                 profileImage={profileImage}
                 key={index}
-                className="border-4 border-yellow-400 rounded-xl border-opacity-75 max-w-sm md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl 2xl:max-h-96 max-h-32 hover:opacity-90"
+                className=" rounded-md border-opacity-75 max-w-sm md:max-w-md md:max-h-48 lg:max-h-64 xl:max-h-80 xl:max-h-96 lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl 2xl:max-h-96 max-h-32 hover:opacity-90"
               />
             )}
           </div>
         ))}
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-6">
           <FaArrowAltCircleLeft
-            className="left-arrow hover:text-green-500 text-2xl"
+            className="left-arrow hover:text-green-500 text-2xl mr-10"
             onClick={prevSlide}
           />
           <FaArrowAltCircleRight
-            className="right-arrow hover:text-green-500 text-2xl"
+            className="right-arrow hover:text-green-500 text-2xl ml-10"
             onClick={nextSlide}
           />
         </div>
       </section>
-      <div className="flex justify-center items-center mt-10">
+      <div className="flex justify-center items-center mt-3">
         {unitProfile.profileImages.map((profileImage, index) => (
           <div
             className={

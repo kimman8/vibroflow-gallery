@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Dropdown = () => {
   return (
-    <div className="grid grid-rows-4 text-center items-center bg-yellow-500">
+    <div className="grid grid-rows-4 text-center items-center bg-gray-200">
       <Link className="p-4 font-mono hover:opacity-75" to="/">
         Home
       </Link>

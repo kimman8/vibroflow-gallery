@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import StickySearch from "./StickySearch";
 
 const Nav = ({ toggle }) => {
   const [navbar, setNavbar] = useState(false);
@@ -43,7 +44,7 @@ const Nav = ({ toggle }) => {
       <Link to="/" className="pl-1">
         <Header />
       </Link>
-
+      {/* <StickySearch /> */}
       <div className="px-4 cursor-pointer md:hidden hover:opacity-75">
         <svg
           className="w-6 h-6"

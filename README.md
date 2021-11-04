@@ -1,3 +1,9 @@
+# Vibroflow Gallery
+A database of all the vibratory machinery that I desgined using CAD. It enables users to easily search for machinery by filtering via the machinery’s features.
+
+# What I Learned
+* Fetch & display images and information using Axios and React
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

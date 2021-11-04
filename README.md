@@ -5,3 +5,5 @@ A database of all the vibratory machinery that I desgined using CAD. It enables 
 * Fetch & display images and information using Axios and React
 * Parse JSON data
 * Update UI with JSON data
+* Search bar and search filtering
+* & much more

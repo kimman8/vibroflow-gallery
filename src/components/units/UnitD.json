@@ -49,7 +49,7 @@
     },
     {
       "serial": "J193",
-      "company": "ONYX",
+      "company": "Onyx",
       "drive": "direct drive",
       "type": "conveyor",
       "width": "600",
@@ -95,7 +95,7 @@
     },
     {
       "serial": "J195-2",
-      "company": "ARGYLE",
+      "company": "Argyle",
       "drive": "sub resonant",
       "type": "conveyor",
       "width": "600",
@@ -118,7 +118,7 @@
     },
     {
       "serial": "J195-1",
-      "company": "ARGYLE",
+      "company": "Argyle",
       "drive": "sub resonant",
       "type": "conveyor",
       "width": "600",
